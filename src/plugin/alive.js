@@ -68,7 +68,7 @@ _________________________________________
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "IMALKA-MD",
+                  newsletterName: "𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-𝛭𝐷",
                   serverMessageId: 143
                 }
               }
