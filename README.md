@@ -38,7 +38,7 @@
 
 2. ## DEPLOY BY SESSION ID or creds.json (Qr code)
 
-<a href='https://replit.com/@atayafuataya/HANSAMAL-MD?v=1' target="_blank"><img alt='Get Session ID' src='https://img.shields.io/badge/Click here to get your session id-blue?style=for-the-badge&logo=opencv&logoColor=white'/></a>
+<a href='https://replit.com/@atayafuataya/HANSAMAL-MD-1' target="_blank"><img alt='Get Session ID' src='https://img.shields.io/badge/Click here to get your session id-blue?style=for-the-badge&logo=opencv&logoColor=white'/></a>
 <hr>
 
 <hr>
