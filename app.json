@@ -4,7 +4,7 @@
   "keywords": [
     "whatsapp bot"
   ],
-  "repository": "https://github.com/cobrs11/Ethix-MD",
+  "repository": "https://github.com/cobrs11/HANSAMAL-MD",
   "stack": "container",
   "env": { 
       "SESSION_ID": {
