@@ -68,7 +68,7 @@ async function downloadSessionData() {
         console.error('Please add your session to SESSION_ID env !!');
         process.exit(1);
     }
-    const sessdata = config.SESSION_ID.split("Ethix-MD&")[1];
+    const sessdata = config.SESSION_ID.split("Imalka-MD&")[1];
     const url = `https://pastebin.com/raw/${sessdata}`;
     try {
         const response = await axios.get(url);
@@ -89,20 +89,20 @@ async function start() {
     try {
         const { state, saveCreds } = await useMultiFileAuthState(sessionDir);
         const { version, isLatest } = await fetchLatestBaileysVersion();
-        console.log(`🤖 Ethix-MD using WA v${version.join('.')}, isLatest: ${isLatest}`);
+        console.log(`🤖 HANSAMAL-MD using WA v${version.join('.')}, isLatest: ${isLatest}`);
         
         const Matrix = makeWASocket({
             version,
             logger: pino({ level: 'silent' }),
             printQRInTerminal: true,
-            browser: ["Ethix-MD", "safari", "3.3"],
+            browser: ["HANSAMAL-MD", "safari", "3.3"],
             auth: state,
             getMessage: async (key) => {
                 if (store) {
                     const msg = await store.loadMessage(key.remoteJid, key.id);
                     return msg.message || undefined;
                 }
-                return { conversation: "Ethix-MD Nonstop Testing" };
+                return { conversation: "HANSAMAL-MD Nonstop Testing" };
             }
         });
 
