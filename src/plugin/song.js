@@ -13,7 +13,7 @@ const song = async (m, Matrix) => {
     if (!text) return m.reply('Please provide a YT URL or search query.');
 
     try {
-      await m.React("🕘");
+      await m.React("🎵");
 
       const isUrl = ytdl.validateURL(text);
 
@@ -27,7 +27,7 @@ const song = async (m, Matrix) => {
             contextInfo: {
               mentionedJid: [m.sender],
               externalAdReply: {
-                title: "↺ |◁   II   ▷|   ♡",
+                title: "↺ |◁   II   ▷|  ",
                 body: `Now playing: ${videoInfo.title}`,
                 thumbnailUrl: videoInfo.thumbnail,
                 sourceUrl: videoInfo.url,
