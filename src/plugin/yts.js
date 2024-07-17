@@ -33,7 +33,7 @@ const song = async (m, Matrix) => {
     if (!text) return m.reply('Please provide a YouTube URL or search query');
 
     try {
-      await m.React("🕘");
+      await m.React("🔍️");
 
       // Search YouTube for the provided query
       const searchResult = await yts(text);
@@ -103,11 +103,11 @@ const song = async (m, Matrix) => {
                   {
                     name: "single_select",
                     buttonParamsJson: JSON.stringify({
-                      title: "🔖 SELECT A VIDEO",
+                      title: "💻️ SELECT A VIDEO",
                       sections: [
                         {
-                          title: "😎 Top 10 YouTube Results - Videos",
-                          highlight_label: "🤩 Top 10",
+                          title: "🔍️Top 10 YouTube Results - Videos",
+                          highlight_label: "🔍️Top 10",
                           rows: videoButtons
                         },
                       ]
@@ -141,7 +141,7 @@ const song = async (m, Matrix) => {
       await Matrix.relayMessage(msg.key.remoteJid, msg.message, {
         messageId: msg.key.id
       });
-      await m.React("✅");
+      await m.React("☑️");
 
 
       videoIndex += topVideos.length;
