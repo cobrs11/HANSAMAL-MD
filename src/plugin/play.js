@@ -34,7 +34,7 @@ const playcommand = async (m, Matrix) => {
     }
 
     try {
-      await m.React("🕘");
+      await m.React("🎵");
 
       const searchResults = await ytSearch(text);
       const videos = searchResults.videos.slice(0, 5);
@@ -104,7 +104,7 @@ const playcommand = async (m, Matrix) => {
                 text: `*HANSAMAL-MD YOUTUBE SEARCH*\n\n> *TITLE:*  ${currentResult.title}\n> *AUTHOR:* ${currentResult.author.name}\n> *VIEWS:* ${currentResult.views}\n> *DURATION:* ${currentResult.timestamp}\n> *YTLINK:* ${url}\n`
               }),
               footer: proto.Message.InteractiveMessage.Footer.create({
-                text: "© Powered By 𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-𝞛𝘿"
+                text: "© Powered By IMALKA-HANSAMAL"
               }),
               header: proto.Message.InteractiveMessage.Header.create({
                 ...(await prepareWAMessageMedia({ image: { url: thumbnailUrl } }, { upload: Matrix.waUploadToServer })),
@@ -198,7 +198,7 @@ const playcommand = async (m, Matrix) => {
                 text: `*HANSAMAL-MD YOUTUBE SEARCH*\n\n> *🔍TITLE:* ${currentResult.title}\n> *AUTHOR:* ${currentResult.author.name}\n> *VIEWS:* ${currentResult.views}\n> *DURATION:* ${currentResult.timestamp}\n> *YTLINK:* ${url}`
               }),
               footer: proto.Message.InteractiveMessage.Footer.create({
-                text: "© Powered By 𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-𝞛𝘿"
+                text: "© Powered By IMALKA-HANSAMAL"
               }),
               header: proto.Message.InteractiveMessage.Header.create({
                 ...(await prepareWAMessageMedia({ image: { url: thumbnailUrl } }, { upload: Matrix.waUploadToServer })),
