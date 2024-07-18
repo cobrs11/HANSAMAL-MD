@@ -76,7 +76,7 @@ const test = async (m, Matrix) => {
     public: true // or false
 };
 
-let mode = ethix.public ? 'public' : 'private';
+let mode = hansamal.public ? 'public' : 'private';
 
         const validCommands = ['list', 'help', 'menu'];
 
@@ -91,17 +91,17 @@ let mode = ethix.public ? 'public' : 'private';
           interactiveMessage: proto.Message.InteractiveMessage.create({
             body: proto.Message.InteractiveMessage.Body.create({
               text: `╭─────────────━┈⊷
-│🤖 ʙᴏᴛ ɴᴀᴍᴇ: *𝙷𝙰𝙽𝚂𝙰𝙼𝙰𝙻-𝙼𝙳*
-│📍 ᴠᴇʀꜱɪᴏɴ: 2.0.3
-│👨‍💻 ᴏᴡɴᴇʀ : *𝙸𝙼𝙰𝙻𝙺𝙰*      
+│🤖 ʙᴏᴛ ɴᴀᴍᴇ: *HANSAMAL-MD*
+│📍 ᴠᴇʀꜱɪᴏɴ: 3.0.1
+│👨‍💻 ᴏᴡɴᴇʀ : *🌐IMALKA-HANSAMAL*      
 │👤 ɴᴜᴍʙᴇʀ: 94711262551
-│📡 ᴘʟᴀᴛғᴏʀᴍ: *${os.platform()}*
+│📡 ᴘʟᴀᴛғᴏʀᴍ: *SAFARI*
 │🛡 ᴍᴏᴅᴇ: *${mode}*
 │💫 ᴘʀᴇғɪx: *[Multi-Prefix]*
 ╰─────────────━┈⊷ `
             }),
             footer: proto.Message.InteractiveMessage.Footer.create({
-              text: "© Powered By IMALKA-HANSAMAL"
+              text: "© Powered By 🌐IMALKA-HANSAMAL"
             }),
             header: proto.Message.InteractiveMessage.Header.create({
                 ...(await prepareWAMessageMedia({ image : fs.readFileSync('./src/HANSAMAL.jpg')}, { upload: Matrix.waUploadToServer})), 
@@ -114,70 +114,70 @@ let mode = ethix.public ? 'public' : 'private';
               buttons: [
                 {
                   "name": "single_select",
-                  "buttonParamsJson": `{"title":"🔖𝚻𝚫𝚸 𝐅𝚯𝚪 𝚯𝚸𝚵𝚴 𝚳𝚵𝚴𝐔",
+                  "buttonParamsJson": `{"title":"🔥TAP🌐IMALKA-HANSAMAL MENU",
                  "sections":
                    [{
-                    "title":"😎 𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-𝛭𝐷 𝛥𝐿𝐿𝛭𝛯𝛮𝑈",
-                    "highlight_label":"🤩 𝛥𝐿𝐿𝛭𝛯𝛮𝑈",
+                    "title":"😎 HANSAMAL ALL MENU",
+                    "highlight_label":" ALL MENU",
                     "rows":[
                       {
                        "header":"",
-                       "title":"🔰 ᴀʟʟ ᴍᴇɴᴜ",
-                       "description":"🎨𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-𝛭𝐷 𝛥𝐿𝐿𝛭𝛯𝛮𝑈🎨",
+                       "title":"🔰 ALL MENU",
+                       "description":"🌐HANSAMAL ALL MENU",
                        "id":"View All Menu"
                       },
                       {
                         "header":"",
-                        "title":"⬇️ ᴅᴏᴡɴʟᴀᴏᴅᴇʀ ᴍᴇɴᴜ",
-                        "description":"📂𝐒𝚮𝚯𝐖 𝚫𝐋𝐋 𝐃𝚯𝐖𝚴𝐋𝚯𝚫𝐃 𝐅𝚵𝚫𝚻𝐔𝚪𝚵𝐒🗂",
+                        "title":"⬇️ DOWNLOADER MENU",
+                        "description":"SHOW ALL DOWNLOAD",
                         "id":"Downloader Menu"
                       },
                       {
                         "header":"",
-                        "title":"👨‍👨‍👧‍👧ɢʀᴏᴜᴘ ᴍᴇɴᴜ",
-                        "description":"🥵𝐅𝚵𝚫𝚻𝐔𝚪𝚵 𝚻𝚮𝚫𝚻 𝚫𝚪𝚵 𝚯𝚴𝐋𝐘 𝚫𝛁𝚰𝐋𝚫𝚩𝐋𝚵 𝐅𝚯𝚪 𝐆𝚪𝚯𝐔𝚸🥵",
+                        "title":"👨‍👨‍👧‍👧GROUP MENU",
+                        "description":"GROUP MENU",
                         "id":"Group Menu"
                       },
                       {
                         "header":"",
-                        "title":"👨‍🔧 ᴛᴏᴏʟ ᴍᴇɴᴜ",
-                        "description":"🛠 𝐒𝚮𝚯𝐖 𝚳𝚵 𝚻𝚯𝚯𝐋 𝚳𝚵𝚴𝐔",
+                        "title":"🛠 TOOL MENU",
+                        "description":" SHOW TOOL MENU",
                         "id":"Tool Menu"
                       },
                       {
                         "header":"",
-                        "title":"🗿 ᴍᴀɪɴ ᴍᴇɴᴜ",
-                        "description":"📪 𝚩𝚯𝚻 𝚳𝚫𝚰𝚴 𝐂𝚯𝚳𝚳𝚫𝚴𝐃𝐒🗳",
+                        "title":"📪 MAIN MENU",
+                        "description":" BOT MAIN COMMANDS",
                         "id":"Main Menu"
                       },
                      {
                         "header":"",
-                        "title":"👨‍💻 ᴏᴡɴᴇʀ ᴍᴇɴᴜ",
-                        "description":"😎𝐅𝚵𝚫𝚻𝐔𝚪𝚵 𝚻𝚮𝚫𝚻 𝚫𝚪𝚵 𝚯𝚴𝐋𝐘 𝐅𝚯𝚪 𝚳𝐘 𝚮𝚫𝚴𝐃𝐒𝚯𝚳𝚵 𝚯𝐖𝚴𝚵𝚪👨‍💼",
+                        "title":"👨‍💻 OWNER MENU",
+                        "description":"MY OWNER DETAIS",
                         "id":"Owner Menu"
                       },
                       {
                         "header":"",
-                        "title":"✨ ᴀɪ ᴍᴇɴᴜ",
-                        "description":"💫 𝐒𝚮𝚯𝐖 𝚳𝚵 𝚫𝚰 𝚳𝚵𝚴𝐔 🎇",
+                        "title":"✨ AI MENU",
+                        "description":"AI MENU",
                         "id":"Ai Menu"
                       },
                       {
                         "header":"",
-                        "title":"🔍sᴇᴀʀᴄʜ ᴍᴇɴᴜ🔎",
-                        "description":"♂️ 𝐒𝚮𝚯𝐖 𝚳𝚵 𝐒𝚵𝚫𝚪𝐂𝚮 𝚳𝚵𝚴𝐔",
+                        "title":"🔎SEARCH MENU",
+                        "description":"SEARCH MENU",
                         "id":"Search Menu"
                       },
                       {
                         "header":"",
-                        "title":"🧚‍♂️ sᴛᴀʟᴋ ᴍᴇɴᴜ",
-                        "description":"👨‍💼 𝐒𝚮𝚯𝐖 𝚳𝚵 𝐒𝚻𝚫𝐋𝐊 𝚳𝚵𝚴𝐔🪆",
+                        "title":"🧚‍♂️ STALK MENU",
+                        "description":"STALK MENU",
                         "id":"Stalk Menu"
                       },
                       {
                         "header":"",
-                        "title":"🥏 𝚌𝚘𝚗𝚟𝚎𝚛𝚝𝚎𝚛 𝚖𝚎𝚗𝚞",
-                        "description":"🛷 𝐒𝚮𝚯𝐖 𝚳𝚵 𝐂𝚯𝚴𝛁𝚵𝚪𝚻𝚵𝚪 𝚳𝚵𝚴𝐔",
+                        "title":"🥏 CONVERTER MENU",
+                        "description":"CONVERTER MENU",
                         "id":"Converter Menu"
                       }
                     ]}
@@ -208,113 +208,96 @@ let mode = ethix.public ? 'public' : 'private';
         const mode = process.env.MODE;
         const str = `hey ${m.pushName} ${pushwish}
 ╭─────────────━┈⊷
-│🤖 ʙᴏᴛ ɴᴀᴍᴇ: *𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-M𝘿*
-│📍 ᴠᴇʀꜱɪᴏɴ: 2.0.3
-│👨‍💻 ᴏᴡɴᴇʀ : *𝙸𝙼𝙰𝙻𝙺𝙰*      
+│🤖 ʙᴏᴛ ɴᴀᴍᴇ: *HANSAMAL-MD*
+│📍 ᴠᴇʀꜱɪᴏɴ: 3.0.1
+│👨‍💻 ᴏᴡɴᴇʀ : *🌐IMALKA-HANSAMAL*      
 │👤 ɴᴜᴍʙᴇʀ: 94711262551
-
 │💻 ᴘʟᴀᴛғᴏʀᴍ: *${os.platform()}*
 │🛡 ᴍᴏᴅᴇ: *${mode}*
 │💫 ᴘʀᴇғɪx: *[Multi-Prefix]*
 ╰─────────────━┈⊷ 
-╭━❮ 𝙲𝙾𝙽𝚅𝙴𝚁𝚃𝙴𝚁 ❯━╮
-┃✰ ${prefix}𝙰𝚃𝚃𝙿
-┃✰ ${prefix}𝙰𝚃𝚃𝙿2
-┃✰ ${prefix}𝙰𝚃𝚃𝙿3
-┃✰ ${prefix}𝙴𝙱𝙸𝙽𝙰𝚁𝚈
-┃✰ ${prefix}𝙳𝙱𝙸𝙽𝙰𝚁𝚈
-┃✰ ${prefix}𝙴𝙼𝙾𝙹𝙸𝙼𝙸𝚇
-┃✰ ${prefix}𝙼𝙿3
+╭━❮ CONVERTER ❯━╮
+┃✰ ${prefix}ATTP
+┃✰ ${prefix}ATTP2
+┃✰ ${prefix}ATTP3
+┃✰ ${prefix}EBINARY
+┃✰ ${prefix}DBINARY
+┃✰ ${prefix}EMOJIMIX
+┃✰ ${prefix}MP3
 ╰━━━━━━━━━━━━━━━⪼
-╭━❮ 𝙰𝙸 ❯━╮
-┃✰ ${prefix}𝙰𝚒
-┃✰ ${prefix}𝙱𝚞𝚐
-┃✰ ${prefix}𝚁𝚎𝚙𝚘𝚛𝚝
-┃✰ ${prefix}𝙶𝚙𝚝
-┃✰ ${prefix}𝙳𝚊𝚕𝚕𝚎
-┃✰ ${prefix}𝚁𝚎𝚖𝚒𝚗𝚒
-┃✰ ${prefix}𝙶𝚎𝚖𝚒𝚗𝚒
+╭━❮ AI ❯━╮
+┃✰ ${prefix}AI
+┃✰ ${prefix}BUG
+┃✰ ${prefix}REPORT
+┃✰ ${prefix}GPT
+┃✰ ${prefix}DALLE
+┃✰ ${prefix}REMINI
+┃✰ ${prefix}GEMINI
 ╰━━━━━━━━━━━━━━━⪼
-╭━❮ 𝚃𝙾𝙾𝙻 ❯━╮
-┃✰ ${prefix}𝙲𝚊𝚕𝚌𝚞𝚕𝚊𝚝𝚘𝚛
-┃✰ ${prefix}𝚃𝚎𝚖𝚙𝚖𝚊𝚒𝚕
-┃✰ ${prefix}𝙲𝚑𝚎𝚌𝚔𝚖𝚊𝚒𝚕
-┃✰ ${prefix}𝚃𝚛𝚝
-┃✰ ${prefix}𝚃𝚝𝚜
+╭━❮ TOOL ❯━╮
+┃✰ ${prefix}CALCULATOR
+┃✰ ${prefix}TEMPMAIL
+┃✰ ${prefix}CHECKMAIL
 ╰━━━━━━━━━━━━━━━⪼
-╭━❮ 𝙶𝚁𝙾𝚄𝙿 ❯━╮
-┃✰ ${prefix}𝙻𝚒𝚗𝚔𝙶𝚛𝚘𝚞𝚙
-┃✰ ${prefix}𝚂𝚎𝚝𝚙𝚙𝚐𝚌
-┃✰ ${prefix}𝚂𝚎𝚝𝚗𝚊𝚖𝚎
-┃✰ ${prefix}𝚂𝚎𝚝𝚍𝚎𝚜𝚌
-┃✰ ${prefix}𝙶𝚛𝚘𝚞𝚙
-┃✰ ${prefix}𝙶𝚌𝚜𝚎𝚝𝚝𝚒𝚗𝚐
-┃✰ ${prefix}𝚆𝚎𝚕𝚌𝚘𝚖𝚎
-┃✰ ${prefix}𝙰𝚍𝚍
-┃✰ ${prefix}𝙺𝚒𝚌𝚔
-┃✰ ${prefix}𝙷𝚒𝚍𝚎𝚃𝚊𝚐
-┃✰ ${prefix}𝚃𝚊𝚐𝚊𝚕𝚕
-┃✰ ${prefix}𝙰𝚗𝚝𝚒𝙻𝚒𝚗𝚔
-┃✰ ${prefix}𝙰𝚗𝚝𝚒𝚃𝚘𝚡𝚒𝚌
-┃✰ ${prefix}𝙿𝚛𝚘𝚖𝚘𝚝𝚎
-┃✰ ${prefix}𝙳𝚎𝚖𝚘𝚝𝚎
-┃✰ ${prefix}𝙶𝚎𝚝𝚋𝚒𝚘
+╭━❮ GROUP ❯━╮
+┃✰ ${prefix}LINKGROUP
+┃✰ ${prefix}SETNAME
+┃✰ ${prefix}GROUP
+┃✰ ${prefix}WELCOME
+┃✰ ${prefix}ADD
+┃✰ ${prefix}KICK
 ╰━━━━━━━━━━━━━━━⪼
-╭━❮ 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 ❯━╮
-┃✰ ${prefix}𝙰𝚙𝚔
-┃✰ ${prefix}𝙵𝚊𝚌𝚎𝚋𝚘𝚘𝚔
-┃✰ ${prefix}𝙼𝚎𝚍𝚒𝚊𝚏𝚒𝚛𝚎
-┃✰ ${prefix}𝙿𝚒𝚗𝚝𝚎𝚛𝚎𝚜𝚝𝚍𝚕
-┃✰ ${prefix}𝙶𝚒𝚝𝚌𝚕𝚘𝚗𝚎
-┃✰ ${prefix}𝙶𝚍𝚛𝚒𝚟𝚎
-┃✰ ${prefix}𝙸𝚗𝚜𝚝𝚊
-┃✰ ${prefix}𝚈𝚝𝚖𝚙3
-┃✰ ${prefix}𝚈𝚝𝚖𝚙4
-┃✰ ${prefix}𝙿𝚕𝚊𝚢
-┃✰ ${prefix}𝚂𝚘𝚗𝚐
-┃✰ ${prefix}𝚅𝚒𝚍𝚎𝚘
-┃✰ ${prefix}𝚈𝚝𝚖𝚙3𝚍𝚘𝚌
-┃✰ ${prefix}𝚈𝚝𝚖𝚙4𝚍𝚘𝚌
-┃✰ ${prefix}𝚃𝚒𝚔𝚝𝚘𝚔
+╭━❮ DOWNLOAD ❯━╮
+┃✰ ${prefix}APK
+┃✰ ${prefix}FACEBOOK
+┃✰ ${prefix}MEDIAFIRE
+┃✰ ${prefix}PINTERESTDL
+┃✰ ${prefix}GITCLONE
+┃✰ ${prefix}GDRIVE
+┃✰ ${prefix}INSTA
+┃✰ ${prefix}YTMP3
+┃✰ ${prefix}YTMP4
+┃✰ ${prefix}PLAY
+┃✰ ${prefix}SONG
+┃✰ ${prefix}VIDEO
+┃✰ ${prefix}YTMP3DOC
+┃✰ ${prefix}YTMP4DOC
+┃✰ ${prefix}TIKTOK
 ╰━━━━━━━━━━━━━━━⪼
-╭━❮ 𝚂𝙴𝙰𝚁𝙲𝙷 ❯━╮
-┃✰ ${prefix}𝙿𝚕𝚊𝚢
-┃✰ ${prefix}𝚈𝚝𝚜
-┃✰ ${prefix}𝙸𝚖𝚍𝚋
-┃✰ ${prefix}𝙶𝚘𝚘𝚐𝚕𝚎
-┃✰ ${prefix}𝙶𝚒𝚖𝚊𝚐𝚎
-┃✰ ${prefix}𝙿𝚒𝚗𝚝𝚎𝚛𝚎𝚜𝚝
-┃✰ ${prefix}𝚆𝚊𝚕𝚕𝚙𝚊𝚙𝚎𝚛
-┃✰ ${prefix}𝚆𝚒𝚔𝚒𝚖𝚎𝚍𝚒𝚊
-┃✰ ${prefix}𝚈𝚝𝚜𝚎𝚊𝚛𝚌𝚑
-┃✰ ${prefix}𝚁𝚒𝚗𝚐𝚝𝚘𝚗𝚎
-┃✰ ${prefix}𝙻𝚢𝚛𝚒𝚌𝚜
+╭━❮ SEARCH ❯━╮
+┃✰ ${prefix}PLAY
+┃✰ ${prefix}YTS
+┃✰ ${prefix}IMDB
+┃✰ ${prefix}GOOGLE
+┃✰ ${prefix}GIMAGE
+┃✰ ${prefix}PINTEREST
+┃✰ ${prefix}WALLPAPER
+┃✰ ${prefix}WIKIMEDIA
+┃✰ ${prefix}YTSEARCH
+┃✰ ${prefix}RINGTONE
+┃✰ ${prefix}LYRICS
 ╰━━━━━━━━━━━━━━━⪼
-╭━❮ 𝙼𝙰𝙸𝙽 ❯━╮
-┃✰ ${prefix}𝙿𝚒𝚗𝚐
-┃✰ ${prefix}𝙰𝚕𝚒𝚟𝚎
-┃✰ ${prefix}𝙾𝚠𝚗𝚎𝚛
-┃✰ ${prefix}𝙼𝚎𝚗𝚞
-┃✰ ${prefix}𝙸𝚗𝚏𝚘𝚋𝚘𝚝
+╭━❮ MAIN ❯━╮
+┃✰ ${prefix}PING
+┃✰ ${prefix}ALIVE
+┃✰ ${prefix}OWNER
+┃✰ ${prefix}MENU
+┃✰ ${prefix}INFORBOT
 ╰━━━━━━━━━━━━━━━⪼
-╭━❮ 𝙾𝚆𝙽𝙴𝚁 ❯━╮
-┃✰ ${prefix}𝙹𝚘𝚒𝚗
-┃✰ ${prefix}𝙻𝚎𝚊𝚟𝚎
-┃✰ ${prefix}𝙱𝚕𝚘𝚌𝚔
-┃✰ ${prefix}𝚄𝚗𝚋𝚕𝚘𝚌𝚔
-┃✰ ${prefix}𝚂𝚎𝚝𝚙𝚙𝚋𝚘𝚝
-┃✰ ${prefix}𝙰𝚗𝚝𝚒𝚌𝚊𝚕𝚕
-┃✰ ${prefix}𝚂𝚎𝚝𝚜𝚝𝚊𝚝𝚞𝚜
-┃✰ ${prefix}𝚂𝚎𝚝𝚗𝚊𝚖𝚎𝚋𝚘𝚝
-┃✰ ${prefix}𝙰𝚞𝚝𝚘𝚃𝚢𝚙𝚒𝚗𝚐
-┃✰ ${prefix}𝙰𝚕𝚠𝚊𝚢𝚜𝙾𝚗𝚕𝚒𝚗𝚎
-┃✰ ${prefix}𝙰𝚞𝚝𝚘𝚁𝚎𝚊𝚍
-┃✰ ${prefix}𝚊𝚞𝚝𝚘𝚜𝚟𝚒𝚎𝚠
+╭━❮ OWNER ❯━╮
+┃✰ ${prefix}JOIN
+┃✰ ${prefix}LEAVE
+┃✰ ${prefix}BLOCK
+┃✰ ${prefix}UNBLOCK
+┃✰ ${prefix}BCGROUP
+┃✰ ${prefix}SETNAMEBOT
+┃✰ ${prefix}AUTOTYPING
+┃✰ ${prefix}ALWAYSONLINE
+┃✰ ${prefix}AUTOREAD
 ╰━━━━━━━━━━━━━━━⪼
-╭━❮ 𝚂𝚃𝙰𝙻𝙺 ❯━╮
-┃✰ ${prefix}𝚃𝚛𝚞𝚎𝚌𝚊𝚕𝚕𝚎𝚛
-┃✰ ${prefix}𝙸𝚗𝚜𝚝𝚊𝚂𝚝𝚊𝚕𝚔
-┃✰ ${prefix}𝙶𝚒𝚝𝚑𝚞𝚋𝚂𝚝𝚊𝚕𝚔
+╭━❮ STALK ❯━╮
+┃✰ ${prefix}NOWA
+┃✰ ${prefix}TRUECALLER
 ╰━━━━━━━━━━━━━━━⪼
    `;
         let fgg = {
@@ -325,8 +308,8 @@ let mode = ethix.public ? 'public' : 'private';
             },
             message: {
                 contactMessage: {
-                    displayName: `IMALKA-MD`,
-                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:'Ethix-MD'\nitem1.TEL;waid=${
+                    displayName: `HANSAMAL-MD`,
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:'HANSAMAL-MD'\nitem1.TEL;waid=${
                         m.sender.split("@")[0]
                     }:${
                         m.sender.split("@")[0]
@@ -356,22 +339,22 @@ let mode = ethix.public ? 'public' : 'private';
 │➥ 𝚃𝙾𝚃𝙰𝙻 𝚁𝙰𝙼: ${formatBytes(totalMemoryBytes)}
 │➥ 𝙵𝚁𝙴𝙴 𝚁𝙰𝙼: ${formatBytes(freeMemoryBytes)}
 ╰━━━━━━━━━━━━━━━➥
-╭━❮ 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 ❯━╮
-┃✰ ${prefix}𝙰𝚙𝚔
-┃✰ ${prefix}𝙵𝚊𝚌𝚎𝚋𝚘𝚘𝚔
-┃✰ ${prefix}𝙼𝚎𝚍𝚒𝚊𝚏𝚒𝚛𝚎
-┃✰ ${prefix}𝙿𝚒𝚗𝚝𝚎𝚛𝚎𝚜𝚝𝚍𝚕
-┃✰ ${prefix}𝙶𝚒𝚝𝚌𝚕𝚘𝚗𝚎
-┃✰ ${prefix}𝙶𝚍𝚛𝚒𝚟𝚎
-┃✰ ${prefix}𝙸𝚗𝚜𝚝𝚊
-┃✰ ${prefix}𝚈𝚝𝚖𝚙3
-┃✰ ${prefix}𝚈𝚝𝚖𝚙4
-┃✰ ${prefix}𝙿𝚕𝚊𝚢
-┃✰ ${prefix}𝚂𝚘𝚗𝚐
-┃✰ ${prefix}𝚅𝚒𝚍𝚎𝚘
-┃✰ ${prefix}𝚈𝚝𝚖𝚙3𝚍𝚘𝚌
-┃✰ ${prefix}𝚈𝚝𝚖𝚙4𝚍𝚘𝚌
-┃✰ ${prefix}𝚃𝚒𝚔𝚝𝚘𝚔
+╭━❮ DOWNLOAD ❯━╮
+┃✰ ${prefix}APK
+┃✰ ${prefix}FACEBOOK
+┃✰ ${prefix}MEDIAFIRE
+┃✰ ${prefix}PINTERESTDL
+┃✰ ${prefix}GITCLONE
+┃✰ ${prefix}GDRIVE
+┃✰ ${prefix}INSTA
+┃✰ ${prefix}YTMP3
+┃✰ ${prefix}YTMP4
+┃✰ ${prefix}PLAY
+┃✰ ${prefix}SONG
+┃✰ ${prefix}VIDEO
+┃✰ ${prefix}YTMP3DOC
+┃✰ ${prefix}YTMP4DOC
+┃✰ ${prefix}TIKTOK
 ╰━━━━━━━━━━━━━━━⪼`
 await Matrix.sendMessage(m.from, {
   image: fs.readFileSync('./src/HANSAMAL.jpg'), 
@@ -396,22 +379,13 @@ await Matrix.sendMessage(m.from, {
 │➥ 𝚃𝙾𝚃𝙰𝙻 𝚁𝙰𝙼: ${formatBytes(totalMemoryBytes)}
 │➥ 𝙵𝚁𝙴𝙴 𝚁𝙰𝙼: ${formatBytes(freeMemoryBytes)}
 ╰━━━━━━━━━━━━━━━➥
-╭━❮ 𝙶𝚁𝙾𝚄𝙿 ❯━╮
-┃✰ ${prefix}𝙻𝚒𝚗𝚔𝙶𝚛𝚘𝚞𝚙
-┃✰ ${prefix}𝚂𝚎𝚝𝚙𝚙𝚐𝚌
-┃✰ ${prefix}𝚂𝚎𝚝𝚗𝚊𝚖𝚎
-┃✰ ${prefix}𝚂𝚎𝚝𝚍𝚎𝚜𝚌
-┃✰ ${prefix}𝙶𝚛𝚘𝚞𝚙
-┃✰ ${prefix}𝚆𝚎𝚕𝚌𝚘𝚖𝚎
-┃✰ ${prefix}𝙰𝚍𝚍
-┃✰ ${prefix}𝙺𝚒𝚌𝚔
-┃✰ ${prefix}𝙷𝚒𝚍𝚎𝚃𝚊𝚐
-┃✰ ${prefix}𝚃𝚊𝚐𝚊𝚕𝚕
-┃✰ ${prefix}𝙰𝚗𝚝𝚒𝙻𝚒𝚗𝚔
-┃✰ ${prefix}𝙰𝚗𝚝𝚒𝚃𝚘𝚡𝚒𝚌
-┃✰ ${prefix}𝙿𝚛𝚘𝚖𝚘𝚝𝚎
-┃✰ ${prefix}𝙳𝚎𝚖𝚘𝚝𝚎
-┃✰ ${prefix}𝙶𝚎𝚝𝚋𝚒𝚘
+╭━❮ GROUP ❯━╮
+┃✰ ${prefix}LINKGROUP
+┃✰ ${prefix}SETNAME
+┃✰ ${prefix}GROUP
+┃✰ ${prefix}WELCOME
+┃✰ ${prefix}ADD
+┃✰ ${prefix}KICK
 ╰━━━━━━━━━━━━━━━⪼
      `
      await Matrix.sendMessage(m.from, {
@@ -432,12 +406,12 @@ await Matrix.sendMessage(m.from, {
 │➥ 𝚃𝙾𝚃𝙰𝙻 𝚁𝙰𝙼: ${formatBytes(totalMemoryBytes)}
 │➥ 𝙵𝚁𝙴𝙴 𝚁𝙰𝙼: ${formatBytes(freeMemoryBytes)}
 ╰━━━━━━━━━━━━━━━➥
-╭━❮ 𝙼𝙰𝙸𝙽 ❯━╮
-┃✰ ${prefix}𝙿𝚒𝚗𝚐
-┃✰ ${prefix}𝙰𝚕𝚒𝚟𝚎
-┃✰ ${prefix}𝙾𝚠𝚗𝚎𝚛
-┃✰ ${prefix}𝙼𝚎𝚗𝚞
-┃✰ ${prefix}𝙸𝚗𝚏𝚘𝚋𝚘𝚝
+╭━❮ MAIN ❯━╮
+┃✰ ${prefix}PING
+┃✰ ${prefix}ALIVE
+┃✰ ${prefix}OWNER
+┃✰ ${prefix}MENU
+┃✰ ${prefix}INFORBOT
 ╰━━━━━━━━━━━━━━━⪼`
 await Matrix.sendMessage(m.from, {
   image: fs.readFileSync('./src/HANSAMAL.jpg'), 
@@ -448,7 +422,7 @@ await Matrix.sendMessage(m.from, {
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "IMALKA-MD",
+                  newsletterName: "HANSAMAL-MD",
                   serverMessageId: 143
                 }
               }
@@ -462,21 +436,16 @@ await Matrix.sendMessage(m.from, {
 │➥ 𝚃𝙾𝚃𝙰𝙻 𝚁𝙰𝙼: ${formatBytes(totalMemoryBytes)}
 │➥ 𝙵𝚁𝙴𝙴 𝚁𝙰𝙼: ${formatBytes(freeMemoryBytes)}
 ╰━━━━━━━━━━━━━━━➥
-╭━❮ 𝙾𝚆𝙽𝙴𝚁 ❯━╮
-┃✰ ${prefix}𝙹𝚘𝚒𝚗
-┃✰ ${prefix}𝙻𝚎𝚊𝚟𝚎
-┃✰ ${prefix}𝙱𝚕𝚘𝚌𝚔
-┃✰ ${prefix}𝚄𝚗𝚋𝚕𝚘𝚌𝚔
-┃✰ ${prefix}𝙱𝚌𝚐𝚛𝚘𝚞𝚙
-┃✰ ${prefix}𝙱𝚌𝚊𝚕𝚕
-┃✰ ${prefix}𝚂𝚎𝚝𝚙𝚙𝚋𝚘𝚝
-┃✰ ${prefix}𝙰𝚗𝚝𝚒𝚌𝚊𝚕𝚕
-┃✰ ${prefix}𝚂𝚎𝚝𝚜𝚝𝚊𝚝𝚞𝚜
-┃✰ ${prefix}𝚂𝚎𝚝𝚗𝚊𝚖𝚎𝚋𝚘𝚝
-┃✰ ${prefix}𝙰𝚞𝚝𝚘𝚃𝚢𝚙𝚒𝚗𝚐
-┃✰ ${prefix}𝙰𝚕𝚠𝚊𝚢𝚜𝙾𝚗𝚕𝚒𝚗𝚎
-┃✰ ${prefix}𝙰𝚞𝚝𝚘𝚁𝚎𝚊𝚍
-┃✰ ${prefix}𝚊𝚞𝚝𝚘𝚜𝚟𝚒𝚎𝚠
+╭━❮ OWNER ❯━╮
+┃✰ ${prefix}JOIN
+┃✰ ${prefix}LEAVE
+┃✰ ${prefix}BLOCK
+┃✰ ${prefix}UNBLOCK
+┃✰ ${prefix}BCGROUP
+┃✰ ${prefix}SETNAMEBOT
+┃✰ ${prefix}AUTOTYPING
+┃✰ ${prefix}ALWAYSONLINE
+┃✰ ${prefix}AUTOREAD
 ╰━━━━━━━━━━━━━━━⪼`
 await Matrix.sendMessage(m.from, {
   image: fs.readFileSync('./src/HANSAMAL.jpg'), 
@@ -501,18 +470,9 @@ await Matrix.sendMessage(m.from, {
 │➥ 𝚃𝙾𝚃𝙰𝙻 𝚁𝙰𝙼: ${formatBytes(totalMemoryBytes)}
 │➥ 𝙵𝚁𝙴𝙴 𝚁𝙰𝙼: ${formatBytes(freeMemoryBytes)}
 ╰━━━━━━━━━━━━━━━➥
-╭━❮ 𝚂𝙴𝙰𝚁𝙲𝙷 ❯━╮
-┃✰ ${prefix}𝙿𝚕𝚊𝚢
-┃✰ ${prefix}𝚈𝚝𝚜
-┃✰ ${prefix}𝙸𝚖𝚍𝚋
-┃✰ ${prefix}𝙶𝚘𝚘𝚐𝚕𝚎
-┃✰ ${prefix}𝙶𝚒𝚖𝚊𝚐𝚎
-┃✰ ${prefix}𝙿𝚒𝚗𝚝𝚎𝚛𝚎𝚜𝚝
-┃✰ ${prefix}𝚆𝚊𝚕𝚕𝚙𝚊𝚙𝚎𝚛
-┃✰ ${prefix}𝚆𝚒𝚔𝚒𝚖𝚎𝚍𝚒𝚊
-┃✰ ${prefix}𝚈𝚝𝚜𝚎𝚊𝚛𝚌𝚑
-┃✰ ${prefix}𝚁𝚒𝚗𝚐𝚝𝚘𝚗𝚎
-┃✰ ${prefix}𝙻𝚢𝚛𝚒𝚌𝚜
+╭━❮ SEARCH ❯━╮
+┃✰ ${prefix}PLAY
+┃✰ ${prefix}YTS
 ╰━━━━━━━━━━━━━━━⪼`
 await Matrix.sendMessage(m.from, {
   image: fs.readFileSync('./src/HANSAMAL.jpg'), 
@@ -523,7 +483,7 @@ await Matrix.sendMessage(m.from, {
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "IMALKA-MD",
+                  newsletterName: "HANSAMAL-MD",
                   serverMessageId: 143
                 }
               }
@@ -536,11 +496,9 @@ await Matrix.sendMessage(m.from, {
 │➥ 𝚃𝙾𝚃𝙰𝙻 𝚁𝙰𝙼: ${formatBytes(totalMemoryBytes)}
 │➥ 𝙵𝚁𝙴𝙴 𝚁𝙰𝙼: ${formatBytes(freeMemoryBytes)}
 ╰━━━━━━━━━━━━━━━➥
-╭━❮ 𝚂𝚃𝙰𝙻𝙺 ❯━╮
-┃✰ ${prefix}𝙽𝚘𝚠𝚊
-┃✰ ${prefix}𝚃𝚛𝚞𝚎𝚌𝚊𝚕𝚕𝚎𝚛
-┃✰ ${prefix}𝙸𝚗𝚜𝚝𝚊𝚂𝚝𝚊𝚕𝚔
-┃✰ ${prefix}𝙶𝚒𝚝𝚑𝚞𝚋𝚂𝚝𝚊𝚕𝚔
+╭━❮ STALK ❯━╮
+┃✰ ${prefix}NOWA
+┃✰ ${prefix}TRUECALLER
 ╰━━━━━━━━━━━━━━━⪼`
 await Matrix.sendMessage(m.from, {
   image: fs.readFileSync('./src/HANSAMAL.jpg'), 
@@ -565,13 +523,10 @@ await Matrix.sendMessage(m.from, {
 │➥ 𝚃𝙾𝚃𝙰𝙻 𝚁𝙰𝙼: ${formatBytes(totalMemoryBytes)}
 │➥ 𝙵𝚁𝙴𝙴 𝚁𝙰𝙼: ${formatBytes(freeMemoryBytes)}
 ╰━━━━━━━━━━━━━━━➥
-╭━❮ 𝚃𝙾𝙾𝙻 ❯━╮
-┃✰ ${prefix}𝙲𝚊𝚕𝚌𝚞𝚕𝚊𝚝𝚘𝚛
-┃✰ ${prefix}𝚃𝚎𝚖𝚙𝚖𝚊𝚒𝚕
-┃✰ ${prefix}𝙲𝚑𝚎𝚌𝚔𝚖𝚊𝚒𝚕
-┃✰ ${prefix}𝙸𝚗𝚏𝚘
-┃✰ ${prefix}𝚃𝚛𝚝
-┃✰ ${prefix}𝚃𝚝𝚜
+╭━❮ TOOL ❯━╮
+┃✰ ${prefix}CALCULATOR
+┃✰ ${prefix}TEMPMAIL
+┃✰ ${prefix}CHECKMAIL
 ╰━━━━━━━━━━━━━━━⪼`
 await Matrix.sendMessage(m.from, {
   image: fs.readFileSync('./src/HANSAMAL.jpg'), 
@@ -582,7 +537,7 @@ await Matrix.sendMessage(m.from, {
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "IMALKA-MD",
+                  newsletterName: "HANSAMAL-MD",
                   serverMessageId: 143
                 }
               }
@@ -596,14 +551,14 @@ await Matrix.sendMessage(m.from, {
 │➥ 𝚃𝙾𝚃𝙰𝙻 𝚁𝙰𝙼: ${formatBytes(totalMemoryBytes)}
 │➥ 𝙵𝚁𝙴𝙴 𝚁𝙰𝙼: ${formatBytes(freeMemoryBytes)}
 ╰━━━━━━━━━━━━━━━➥
-╭━❮ 𝙰𝙸 ❯━╮
-┃✰ ${prefix}𝙰𝚒
-┃✰ ${prefix}𝙱𝚞𝚐
-┃✰ ${prefix}𝚁𝚎𝚙𝚘𝚛𝚝
-┃✰ ${prefix}𝙶𝚙𝚝
-┃✰ ${prefix}𝙳𝚊𝚕𝚕𝚎
-┃✰ ${prefix}𝚁𝚎𝚖𝚒𝚗𝚒
-┃✰ ${prefix}𝙶𝚎𝚖𝚒𝚗𝚒
+╭━❮ AI ❯━╮
+┃✰ ${prefix}AI
+┃✰ ${prefix}BUG
+┃✰ ${prefix}REPORT
+┃✰ ${prefix}GPT
+┃✰ ${prefix}DALLE
+┃✰ ${prefix}REMINI
+┃✰ ${prefix}GEMINI
 ╰━━━━━━━━━━━━━━━⪼`
 await Matrix.sendMessage(m.from, {
   image: fs.readFileSync('./src/HANSAMAL.jpg'), 
@@ -614,7 +569,7 @@ await Matrix.sendMessage(m.from, {
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "IMALKA-MD",
+                  newsletterName: "HANSAMAL-MD",
                   serverMessageId: 143
                 }
               }
@@ -628,14 +583,14 @@ await Matrix.sendMessage(m.from, {
 │➥ 𝚃𝙾𝚃𝙰𝙻 𝚁𝙰𝙼: ${formatBytes(totalMemoryBytes)}
 │➥ 𝙵𝚁𝙴𝙴 𝚁𝙰𝙼: ${formatBytes(freeMemoryBytes)}
 ╰━━━━━━━━━━━━━━━➥
-╭━❮ 𝙲𝙾𝙽𝚅𝙴𝚁𝚃𝙴𝚁 ❯━╮
-┃✰ ${prefix}𝙰𝚃𝚃𝙿
-┃✰ ${prefix}𝙰𝚃𝚃𝙿2
-┃✰ ${prefix}𝙰𝚃𝚃𝙿3
-┃✰ ${prefix}𝙴𝙱𝙸𝙽𝙰𝚁𝚈
-┃✰ ${prefix}𝙳𝙱𝙸𝙽𝙰𝚁𝚈
-┃✰ ${prefix}𝙴𝙼𝙾𝙹𝙸𝙼𝙸𝚇
-┃✰ ${prefix}𝙼𝙿3
+╭━❮ CONVERTER ❯━╮
+┃✰ ${prefix}ATTP
+┃✰ ${prefix}ATTP2
+┃✰ ${prefix}ATTP3
+┃✰ ${prefix}EBINARY
+┃✰ ${prefix}DBINARY
+┃✰ ${prefix}EMOJIMIX
+┃✰ ${prefix}MP3
 ╰━━━━━━━━━━━━━━━⪼
      `
      await Matrix.sendMessage(m.from, {
@@ -647,7 +602,7 @@ await Matrix.sendMessage(m.from, {
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "IMALKA-MD",
+                  newsletterName: "HANSAMAL-MD",
                   serverMessageId: 143
                 }
               }
