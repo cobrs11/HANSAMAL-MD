@@ -20,7 +20,6 @@ _________________________________________
 *⏳ ${minutes} Minute*
 *⏲️ ${seconds} Second*
    
-   *© POWERED BY IMALKA-𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇*
 _________________________________________
 `;
 
@@ -30,6 +29,13 @@ _________________________________________
           "buttonParamsJson": JSON.stringify({
             display_text: "MENU",
             id: `.menu`
+          })
+        },
+     {
+          "name": "quick_reply",
+          "buttonParamsJson": JSON.stringify({
+            display_text: "OWNER",
+            id: `.owner`
           })
         },
         {
@@ -53,7 +59,7 @@ _________________________________________
             text: uptimeMessage
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
-            text: "© Powered By 𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-𝞛𝘿"
+            text: "© Powered By *© POWERED BY IMALKA-𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇*"
           }),
           header: proto.Message.InteractiveMessage.Header.create({
             title: "",
@@ -69,7 +75,7 @@ _________________________________________
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
+                  newsletterJid: '0029VajrLTH30LKXN5O5Zj04',
                   newsletterName: "𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-𝛭𝐷",
                   serverMessageId: 143
                 }
