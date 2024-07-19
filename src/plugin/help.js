@@ -190,8 +190,8 @@ let mode = ethix.public ? 'public' : 'private';
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "HANSAMAL-MD",
+                  newsletterJid: '0029VajrLTH30LKXN5O5Zj04',
+                  newsletterName: "𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-𝛭𝐷",
                   serverMessageId: 143
                 }
               }
@@ -325,8 +325,8 @@ let mode = ethix.public ? 'public' : 'private';
             },
             message: {
                 contactMessage: {
-                    displayName: `IMALKA-MD`,
-                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:'Ethix-MD'\nitem1.TEL;waid=${
+                    displayName: `HANSAMAL-MD`,
+                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:'HANSAMAL-MD'\nitem1.TEL;waid=${
                         m.sender.split("@")[0]
                     }:${
                         m.sender.split("@")[0]
@@ -337,13 +337,13 @@ let mode = ethix.public ? 'public' : 'private';
        let { key } = await Matrix.sendMessage(m.from, {
   image: fs.readFileSync('./src/HANSAMAL.jpg'), 
   caption: str, 
-  contextInfo: {
+ contextInfo: {
                   mentionedJid: [m.sender], 
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "HANSAMAL-MD",
+                  newsletterJid: '0029VajrLTH30LKXN5O5Zj04',
+                  newsletterName: "𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-𝛭𝐷",
                   serverMessageId: 143
                 }
               }
@@ -381,8 +381,8 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "HANSAMAL-MD",
+                  newsletterJid: '0029VajrLTH30LKXN5O5Zj04',
+                  newsletterName: "𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-𝛭𝐷",
                   serverMessageId: 143
                 }
               }
@@ -418,9 +418,13 @@ await Matrix.sendMessage(m.from, {
   image: fs.readFileSync('./src/HANSAMAL.jpg'), 
   caption: str, 
   contextInfo: {
-    mentionedJid: [m.sender], 
-    forwardingScore: 9999,
-    isForwarded: true,
+                  mentionedJid: [m.sender], 
+                  forwardingScore: 999,
+                  isForwarded: true,
+                forwardedNewsletterMessageInfo: {
+                  newsletterJid: '0029VajrLTH30LKXN5O5Zj04',
+                  newsletterName: "𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-𝛭𝐷",
+                  serverMessageId: 143
   }
 }, {
   quoted: m
@@ -447,8 +451,8 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "IMALKA-MD",
+                  newsletterJid: '0029VajrLTH30LKXN5O5Zj04',
+                  newsletterName: "𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-𝛭𝐷",
                   serverMessageId: 143
                 }
               }
@@ -486,8 +490,8 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "HANSAMAL-MD",
+                  newsletterJid: '0029VajrLTH30LKXN5O5Zj04',
+                  newsletterName: "𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-𝛭𝐷",
                   serverMessageId: 143
                 }
               }
@@ -522,8 +526,8 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "IMALKA-MD",
+                  newsletterJid: '0029VajrLTH30LKXN5O5Zj04',
+                  newsletterName: "𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-𝛭𝐷",
                   serverMessageId: 143
                 }
               }
@@ -550,8 +554,8 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "HANSAMAL-MD",
+                  newsletterJid: '0029VajrLTH30LKXN5O5Zj04',
+                  newsletterName: "𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-𝛭𝐷",
                   serverMessageId: 143
                 }
               }
@@ -581,8 +585,8 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "IMALKA-MD",
+                  newsletterJid: '0029VajrLTH30LKXN5O5Zj04',
+                  newsletterName: "𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-𝛭𝐷",
                   serverMessageId: 143
                 }
               }
@@ -613,8 +617,8 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "IMALKA-MD",
+                  newsletterJid: '0029VajrLTH30LKXN5O5Zj04',
+                  newsletterName: "𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-𝛭𝐷",
                   serverMessageId: 143
                 }
               }
@@ -646,8 +650,8 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "IMALKA-MD",
+                  newsletterJid: '0029VajrLTH30LKXN5O5Zj04',
+                  newsletterName: "𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-𝛭𝐷",
                   serverMessageId: 143
                 }
               }
