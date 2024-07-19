@@ -21,7 +21,14 @@ _________________________________________
 *⏲️ ${seconds} Second*
    
 _________________________________________
-`;
+`; 
+    }),header: proto.Message.InteractiveMessage.Header.create({
+             ...(await prepareWAMessageMedia({ image: { url: `https://telegra.ph/file/6857947f644f97b7dbbc5.jpg` } }, { upload: Matrix.waUploadToServer })),
+              title: "",
+              gifPlayback: true,
+              subtitle: "",
+              hasMediaAttachment: false 
+            }),
 
   const buttons = [
         {
