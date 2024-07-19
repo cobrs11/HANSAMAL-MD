@@ -185,15 +185,12 @@ let mode = ethix.public ? 'public' : 'private';
                 },
               ],
             }),
-            contextInfo: {
-                  mentionedJid: [m.sender], 
-                  forwardingScore: 999,
-                  isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "HANSAMAL-MD",
-                  serverMessageId: 143
-                }
+            {
+                  name: "cta_url",
+                  buttonParamsJson: JSON.stringify({
+                    display_text: "Join Our Community",
+                    url: `https://whatsapp.com/channel/0029VajrLTH30LKXN5O5Zj04`
+                  })
               }
           }),
         },
@@ -337,14 +334,11 @@ let mode = ethix.public ? 'public' : 'private';
        let { key } = await Matrix.sendMessage(m.from, {
   image: fs.readFileSync('./src/HANSAMAL.jpg'), 
   caption: str, 
-  contextInfo: {
-                  mentionedJid: [m.sender], 
-                  forwardingScore: 999,
-                  isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "HANSAMAL-MD",
-                  serverMessageId: 143
+  {
+                  name: "cta_url",
+                  buttonParamsJson: JSON.stringify({
+                    display_text: "Join Our Community",
+                    url: `https://whatsapp.com/channel/0029VajrLTH30LKXN5O5Zj04`
                 }
               }
 }, {
@@ -376,15 +370,11 @@ let mode = ethix.public ? 'public' : 'private';
 await Matrix.sendMessage(m.from, {
   image: fs.readFileSync('./src/HANSAMAL.jpg'), 
   caption: str, 
-  contextInfo: {
-                  mentionedJid: [m.sender], 
-                  forwardingScore: 999,
-                  isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "HANSAMAL-MD",
-                  serverMessageId: 143
-                }
+   {
+                  name: "cta_url",
+                  buttonParamsJson: JSON.stringify({
+                    display_text: "Join Our Community",
+                    url: `https://whatsapp.com/channel/0029VajrLTH30LKXN5O5Zj04`
               }
 }, {
   quoted: m
@@ -417,11 +407,11 @@ await Matrix.sendMessage(m.from, {
      await Matrix.sendMessage(m.from, {
   image: fs.readFileSync('./src/HANSAMAL.jpg'), 
   caption: str, 
-  contextInfo: {
-    mentionedJid: [m.sender], 
-    forwardingScore: 9999,
-    isForwarded: true,
-  }
+ {
+                  name: "cta_url",
+                  buttonParamsJson: JSON.stringify({
+                    display_text: "Join Our Community",
+                    url: `https://whatsapp.com/channel/0029VajrLTH30LKXN5O5Zj04`
 }, {
   quoted: m
 });
@@ -442,15 +432,12 @@ await Matrix.sendMessage(m.from, {
 await Matrix.sendMessage(m.from, {
   image: fs.readFileSync('./src/HANSAMAL.jpg'), 
   caption: str, 
-  contextInfo: {
-                  mentionedJid: [m.sender], 
-                  forwardingScore: 999,
-                  isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "IMALKA-MD",
-                  serverMessageId: 143
-                }
+ {
+                  name: "cta_url",
+                  buttonParamsJson: JSON.stringify({
+                    display_text: "Join Our Community",
+                    url: `https://whatsapp.com/channel/0029VajrLTH30LKXN5O5Zj04`
+                  })
               }
 }, {
   quoted: m
@@ -481,15 +468,12 @@ await Matrix.sendMessage(m.from, {
 await Matrix.sendMessage(m.from, {
   image: fs.readFileSync('./src/HANSAMAL.jpg'), 
   caption: str, 
-  contextInfo: {
-                  mentionedJid: [m.sender], 
-                  forwardingScore: 999,
-                  isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "HANSAMAL-MD",
-                  serverMessageId: 143
-                }
+ {
+                  name: "cta_url",
+                  buttonParamsJson: JSON.stringify({
+                    display_text: "Join Our Community",
+                    url: `https://whatsapp.com/channel/0029VajrLTH30LKXN5O5Zj04`
+                  })
               }
 }, {
   quoted: m
@@ -517,15 +501,12 @@ await Matrix.sendMessage(m.from, {
 await Matrix.sendMessage(m.from, {
   image: fs.readFileSync('./src/HANSAMAL.jpg'), 
   caption: str, 
-  contextInfo: {
-                  mentionedJid: [m.sender], 
-                  forwardingScore: 999,
-                  isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "IMALKA-MD",
-                  serverMessageId: 143
-                }
+ {
+                  name: "cta_url",
+                  buttonParamsJson: JSON.stringify({
+                    display_text: "Join Our Community",
+                    url: `https://whatsapp.com/channel/0029VajrLTH30LKXN5O5Zj04`
+                  })
               }
 }, {
   quoted: m
@@ -545,15 +526,12 @@ await Matrix.sendMessage(m.from, {
 await Matrix.sendMessage(m.from, {
   image: fs.readFileSync('./src/HANSAMAL.jpg'), 
   caption: str, 
-  contextInfo: {
-                  mentionedJid: [m.sender], 
-                  forwardingScore: 999,
-                  isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "HANSAMAL-MD",
-                  serverMessageId: 143
-                }
+  {
+                  name: "cta_url",
+                  buttonParamsJson: JSON.stringify({
+                    display_text: "Join Our Community",
+                    url: `https://whatsapp.com/channel/0029VajrLTH30LKXN5O5Zj04`
+                  })
               }
 }, {
   quoted: m
@@ -576,15 +554,12 @@ await Matrix.sendMessage(m.from, {
 await Matrix.sendMessage(m.from, {
   image: fs.readFileSync('./src/HANSAMAL.jpg'), 
   caption: str, 
-  contextInfo: {
-                  mentionedJid: [m.sender], 
-                  forwardingScore: 999,
-                  isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "IMALKA-MD",
-                  serverMessageId: 143
-                }
+  {
+                  name: "cta_url",
+                  buttonParamsJson: JSON.stringify({
+                    display_text: "Join Our Community",
+                    url: `https://whatsapp.com/channel/0029VajrLTH30LKXN5O5Zj04`
+                  })
               }
 }, {
   quoted: m
@@ -608,14 +583,12 @@ await Matrix.sendMessage(m.from, {
 await Matrix.sendMessage(m.from, {
   image: fs.readFileSync('./src/HANSAMAL.jpg'), 
   caption: str, 
-  contextInfo: {
-                  mentionedJid: [m.sender], 
-                  forwardingScore: 999,
-                  isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "IMALKA-MD",
-                  serverMessageId: 143
+  {
+                  name: "cta_url",
+                  buttonParamsJson: JSON.stringify({
+                    display_text: "Join Our Community",
+                    url: `https://whatsapp.com/channel/0029VajrLTH30LKXN5O5Zj04`
+                  })
                 }
               }
 }, {
@@ -641,14 +614,12 @@ await Matrix.sendMessage(m.from, {
      await Matrix.sendMessage(m.from, {
   image: fs.readFileSync('./src/HANSAMAL.jpg'), 
   caption: str, 
-  contextInfo: {
-                  mentionedJid: [m.sender], 
-                  forwardingScore: 999,
-                  isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "IMALKA-MD",
-                  serverMessageId: 143
+  {
+                  name: "cta_url",
+                  buttonParamsJson: JSON.stringify({
+                    display_text: "Join Our Community",
+                    url: `https://whatsapp.com/channel/0029VajrLTH30LKXN5O5Zj04`
+                  })
                 }
               }
 }, {
