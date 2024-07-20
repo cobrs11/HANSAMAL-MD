@@ -60,7 +60,7 @@ _________________________________________
             text: uptimeMessage
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
-            text: "© Powered By *© POWERED BY IMALKA-𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇*"
+            text: "© POWERED BY IMALKA-𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇"
           }),
           header: proto.Message.InteractiveMessage.Header.create({
                 ...(await prepareWAMessageMedia({ image: { url: `https://telegra.ph/file/6857947f644f97b7dbbc5.jpg` } }, { upload: Matrix.waUploadToServer })),
