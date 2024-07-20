@@ -81,7 +81,8 @@ let mode = ethix.public ? 'public' : 'private';
         const validCommands = ['list', 'help', 'menu'];
 
   if (validCommands.includes(cmd)) {
-    let msg = generateWAMessageFromContent(m.from, {
+    let msg = generateWAMessageFromContent(m.from, try{
+      await m.React("📃");
       viewOnceMessage: {
         message: {
           "messageContextInfo": {
