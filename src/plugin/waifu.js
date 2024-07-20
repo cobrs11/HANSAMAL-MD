@@ -9,7 +9,7 @@ const stickerCommandHandler = async (m, gss) => {
   const stickerCommands = ['cry', 'kiss', 'kill', 'kick', 'hug', 'pat', 'lick', 'bite', 'yeet', 'bully', 'bonk', 'wink', 'poke', 'nom', 'slap', 'smile', 'wave', 'awoo', 'blush', 'smug', 'dance', 'happy', 'sad', 'cringe', 'cuddle', 'shinobu', 'handhold', 'glomp', 'highfive'];
 
   if (stickerCommands.includes(cmd)) {
-    const packname = `Ethix-MD`;
+    const packname = `HANSAMAL-MD`;
     const author = '';
 
     try {
