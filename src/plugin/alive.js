@@ -63,14 +63,12 @@ _________________________________________
             text: "© Powered By *© POWERED BY IMALKA-𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇*"
           }),
           header: proto.Message.InteractiveMessage.Header.create({
-            title: "",
-            gifPlayback: true,
-            subtitle: "",
-            hasMediaAttachment: false 
-          }),
-          nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
-            buttons
-          }),
+                ...(await prepareWAMessageMedia({ image: { url: `https://telegra.ph/file/6857947f644f97b7dbbc5.jpg` } }, { upload: Matrix.waUploadToServer })),
+                title: ``,
+                gifPlayback: true,
+                subtitle: "",
+                hasMediaAttachment: false 
+              }),
           contextInfo: {
                   mentionedJid: [m.sender], 
                   forwardingScore: 999,
