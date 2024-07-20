@@ -31,7 +31,7 @@ const searchAPK = async (m, Matrix) => {
     if (!text) return m.reply('Please provide a search query for APKs');
 
     try {
-      await m.React("🕘");
+      await m.React("✅");
 
 
       let searchResult = await search(text);
@@ -73,7 +73,7 @@ const searchAPK = async (m, Matrix) => {
                 text: "© Powered By IMALKA-HANSAMAL"
               }),
               header: proto.Message.InteractiveMessage.Header.create({
-                ...(await prepareWAMessageMedia({ image: { url: `https://telegra.ph/file/005ceb36ec2a141f6c891.jpg` } }, { upload: Matrix.waUploadToServer })),
+                ...(await prepareWAMessageMedia({ image: { url: `https://telegra.ph/file/6857947f644f97b7dbbc5.jpg` } }, { upload: Matrix.waUploadToServer })),
                 title: ``,
                 gifPlayback: true,
                 subtitle: "",
