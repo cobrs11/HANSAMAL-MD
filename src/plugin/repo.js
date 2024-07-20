@@ -11,12 +11,12 @@ const handleRepoCommand = async (m, Matrix) => {
     const { full_name, name, forks_count, stargazers_count, created_at, updated_at, owner } = repoData;
 
     const messageText = `📊 Repository Information:
-    \n🔸 *Name:* ${name}
+    \n🔸 *Name:* HANSAMAL-MD
     \n⭐ *Stars:* ${stargazers_count}
     \n🍴 *Forks:* ${forks_count}
     \n📅 *Created At:* ${new Date(created_at).toLocaleDateString()}
     \n🛠️ *Last Updated:* ${new Date(updated_at).toLocaleDateString()}
-    \n👤 *Owner:* ${owner.login}`;
+    \n👤 *Owner:* IMALKA-HANSAMAL`;
 
     const repoMessage = generateWAMessageFromContent(m.from, {
       viewOnceMessage: {
@@ -33,7 +33,7 @@ const handleRepoCommand = async (m, Matrix) => {
               text: "© Powered By 𝙄𝙈𝘼𝙇𝙆𝘼-𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇"
             }),
             header: proto.Message.InteractiveMessage.Header.create({
-             ...(await prepareWAMessageMedia({ image: { url: `https://telegra.ph/file/005ceb36ec2a141f6c891.jpg` } }, { upload: Matrix.waUploadToServer })),
+             ...(await prepareWAMessageMedia({ image: { url: `https://telegra.ph/file/6857947f644f97b7dbbc5.jpg` } }, { upload: Matrix.waUploadToServer })),
               title: "",
               gifPlayback: true,
               subtitle: "",
@@ -59,7 +59,7 @@ const handleRepoCommand = async (m, Matrix) => {
                   name: "cta_url",
                   buttonParamsJson: JSON.stringify({
                     display_text: "Join Our Community",
-                    url: ``
+                    url: `https://whatsapp.com/channel/0029VajrLTH30LKXN5O5Zj04`
                   })
                 }
               ],
