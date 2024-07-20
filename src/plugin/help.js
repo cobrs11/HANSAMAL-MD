@@ -90,10 +90,10 @@ let mode = ethix.public ? 'public' : 'private';
           },
           interactiveMessage: proto.Message.InteractiveMessage.create({
             body: proto.Message.InteractiveMessage.Body.create({
-              text: `╭─────────────━┈⊷
+                            text: `╭─────────────━┈⊷
 │🤖 ʙᴏᴛ ɴᴀᴍᴇ: *𝙷𝙰𝙽𝚂𝙰𝙼𝙰𝙻-𝙼𝙳*
-│📍 ᴠᴇʀꜱɪᴏɴ: 2.0.3
-│👨‍💻 ᴏᴡɴᴇʀ : *𝙸𝙼𝙰𝙻𝙺𝙰*      
+│📍 ᴠᴇʀꜱɪᴏɴ: 3.0.1
+│👨‍💻 ᴏᴡɴᴇʀ : *𝙸𝙼𝙰𝙻𝙺𝙰_HANSAMAL*      
 │👤 ɴᴜᴍʙᴇʀ: 94711262551
 │📡 ᴘʟᴀᴛғᴏʀᴍ: *${os.platform()}*
 │🛡 ᴍᴏᴅᴇ: *${mode}*
@@ -114,70 +114,70 @@ let mode = ethix.public ? 'public' : 'private';
               buttons: [
                 {
                   "name": "single_select",
-                  "buttonParamsJson": `{"title":"🔖𝚻𝚫𝚸 𝐅𝚯𝚪 𝚯𝚸𝚵𝚴 𝚳𝚵𝚴𝐔",
+                  "buttonParamsJson": `{"title":"🌐𝚻𝚫𝚸 𝐅𝚯𝚪 𝚯𝚸𝚵𝚴 𝚳𝚵𝚴𝐔🔖",
                  "sections":
                    [{
-                    "title":"😎 𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-𝛭𝐷 𝛥𝐿𝐿𝛭𝛯𝛮𝑈",
-                    "highlight_label":"🤩 𝛥𝐿𝐿𝛭𝛯𝛮𝑈",
+                    "title":"🌐 𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-𝛭𝐷 𝛥𝐿𝐿𝛭𝛯𝛮𝑈",
+                    "highlight_label":"𝛥𝐿𝐿𝛭𝛯𝛮𝑈",
                     "rows":[
                       {
                        "header":"",
-                       "title":"🔰 ᴀʟʟ ᴍᴇɴᴜ",
-                       "description":"🎨𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-𝛭𝐷 𝛥𝐿𝐿𝛭𝛯𝛮𝑈🎨",
+                       "title":"🌐 ᴀʟʟ ᴍᴇɴᴜ",
+                       "description":"𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-𝛭𝐷 𝛥𝐿𝐿𝛭𝛯𝛮𝑈",
                        "id":"View All Menu"
                       },
                       {
                         "header":"",
-                        "title":"⬇️ ᴅᴏᴡɴʟᴀᴏᴅᴇʀ ᴍᴇɴᴜ",
-                        "description":"📂𝐒𝚮𝚯𝐖 𝚫𝐋𝐋 𝐃𝚯𝐖𝚴𝐋𝚯𝚫𝐃 𝐅𝚵𝚫𝚻𝐔𝚪𝚵𝐒🗂",
+                        "title":"🌐 ᴅᴏᴡɴʟᴀᴏᴅᴇʀ ᴍᴇɴᴜ",
+                        "description":"𝐒𝚮𝚯𝐖 𝚫𝐋𝐋 𝐃𝚯𝐖𝚴𝐋𝚯𝚫𝐃 𝐅𝚵𝚫𝚻𝐔𝚪𝚵𝐒",
                         "id":"Downloader Menu"
                       },
                       {
                         "header":"",
-                        "title":"👨‍👨‍👧‍👧ɢʀᴏᴜᴘ ᴍᴇɴᴜ",
-                        "description":"🥵𝐅𝚵𝚫𝚻𝐔𝚪𝚵 𝚻𝚮𝚫𝚻 𝚫𝚪𝚵 𝚯𝚴𝐋𝐘 𝚫𝛁𝚰𝐋𝚫𝚩𝐋𝚵 𝐅𝚯𝚪 𝐆𝚪𝚯𝐔𝚸🥵",
+                        "title":"🌐ɢʀᴏᴜᴘ ᴍᴇɴᴜ",
+                        "description":"𝐅𝚵𝚫𝚻𝐔𝚪𝚵 𝚻𝚮𝚫𝚻 𝚫𝚪𝚵 𝚯𝚴𝐋𝐘 𝚫𝛁𝚰𝐋𝚫𝚩𝐋𝚵 𝐅𝚯𝚪 𝐆𝚪𝚯𝐔𝚸",
                         "id":"Group Menu"
                       },
                       {
                         "header":"",
-                        "title":"👨‍🔧 ᴛᴏᴏʟ ᴍᴇɴᴜ",
+                        "title":"🌐 ᴛᴏᴏʟ ᴍᴇɴᴜ",
                         "description":"🛠 𝐒𝚮𝚯𝐖 𝚳𝚵 𝚻𝚯𝚯𝐋 𝚳𝚵𝚴𝐔",
                         "id":"Tool Menu"
                       },
                       {
                         "header":"",
-                        "title":"🗿 ᴍᴀɪɴ ᴍᴇɴᴜ",
-                        "description":"📪 𝚩𝚯𝚻 𝚳𝚫𝚰𝚴 𝐂𝚯𝚳𝚳𝚫𝚴𝐃𝐒🗳",
+                        "title":"🌐 ᴍᴀɪɴ ᴍᴇɴᴜ",
+                        "description":"𝚩𝚯𝚻 𝚳𝚫𝚰𝚴 𝐂𝚯𝚳𝚳𝚫𝚴𝐃𝐒",
                         "id":"Main Menu"
                       },
                      {
                         "header":"",
-                        "title":"👨‍💻 ᴏᴡɴᴇʀ ᴍᴇɴᴜ",
-                        "description":"😎𝐅𝚵𝚫𝚻𝐔𝚪𝚵 𝚻𝚮𝚫𝚻 𝚫𝚪𝚵 𝚯𝚴𝐋𝐘 𝐅𝚯𝚪 𝚳𝐘 𝚮𝚫𝚴𝐃𝐒𝚯𝚳𝚵 𝚯𝐖𝚴𝚵𝚪👨‍💼",
+                        "title":"🌐 ᴏᴡɴᴇʀ ᴍᴇɴᴜ",
+                        "description":"𝐅𝚵𝚫𝚻𝐔𝚪𝚵 𝚻𝚮𝚫𝚻 𝚫𝚪𝚵 𝚯𝚴𝐋𝐘 𝐅𝚯𝚪 𝚳𝐘 𝚮𝚫𝚴𝐃𝐒𝚯𝚳𝚵 𝚯𝐖𝚴𝚵𝚪",
                         "id":"Owner Menu"
                       },
                       {
                         "header":"",
-                        "title":"✨ ᴀɪ ᴍᴇɴᴜ",
-                        "description":"💫 𝐒𝚮𝚯𝐖 𝚳𝚵 𝚫𝚰 𝚳𝚵𝚴𝐔 🎇",
+                        "title":"🌐 ᴀɪ ᴍᴇɴᴜ",
+                        "description":"𝐒𝚮𝚯𝐖 𝚳𝚵 𝚫𝚰 𝚳𝚵𝚴𝐔",
                         "id":"Ai Menu"
                       },
                       {
                         "header":"",
-                        "title":"🔍sᴇᴀʀᴄʜ ᴍᴇɴᴜ🔎",
-                        "description":"♂️ 𝐒𝚮𝚯𝐖 𝚳𝚵 𝐒𝚵𝚫𝚪𝐂𝚮 𝚳𝚵𝚴𝐔",
+                        "title":"🌐sᴇᴀʀᴄʜ ᴍᴇɴᴜ",
+                        "description":"𝐒𝚮𝚯𝐖 𝚳𝚵 𝐒𝚵𝚫𝚪𝐂𝚮 𝚳𝚵𝚴𝐔",
                         "id":"Search Menu"
                       },
                       {
                         "header":"",
-                        "title":"🧚‍♂️ sᴛᴀʟᴋ ᴍᴇɴᴜ",
-                        "description":"👨‍💼 𝐒𝚮𝚯𝐖 𝚳𝚵 𝐒𝚻𝚫𝐋𝐊 𝚳𝚵𝚴𝐔🪆",
+                        "title":"🌐 sᴛᴀʟᴋ ᴍᴇɴᴜ",
+                        "description":"𝐒𝚮𝚯𝐖 𝚳𝚵 𝐒𝚻𝚫𝐋𝐊 𝚳𝚵𝚴𝐔🪆",
                         "id":"Stalk Menu"
                       },
                       {
                         "header":"",
-                        "title":"🥏 𝚌𝚘𝚗𝚟𝚎𝚛𝚝𝚎𝚛 𝚖𝚎𝚗𝚞",
-                        "description":"🛷 𝐒𝚮𝚯𝐖 𝚳𝚵 𝐂𝚯𝚴𝛁𝚵𝚪𝚻𝚵𝚪 𝚳𝚵𝚴𝐔",
+                        "title":"🌐 𝚌𝚘𝚗𝚟𝚎𝚛𝚝𝚎𝚛 𝚖𝚎𝚗𝚞",
+                        "description":"𝐒𝚮𝚯𝐖 𝚳𝚵 𝐂𝚯𝚴𝛁𝚵𝚪𝚻𝚵𝚪 𝚳𝚵𝚴𝐔",
                         "id":"Converter Menu"
                       }
                     ]}
@@ -209,8 +209,8 @@ let mode = ethix.public ? 'public' : 'private';
         const str = `hey ${m.pushName} ${pushwish}
 ╭─────────────━┈⊷
 │🤖 ʙᴏᴛ ɴᴀᴍᴇ: *𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-M𝘿*
-│📍 ᴠᴇʀꜱɪᴏɴ: 2.0.3
-│👨‍💻 ᴏᴡɴᴇʀ : *𝙸𝙼𝙰𝙻𝙺𝙰*      
+│📍 ᴠᴇʀꜱɪᴏɴ: 3.0.1
+│👨‍💻 ᴏᴡɴᴇʀ : *𝙸𝙼𝙰𝙻𝙺𝙰_HANSAMAL*   
 │👤 ɴᴜᴍʙᴇʀ: 94711262551
 
 │💻 ᴘʟᴀᴛғᴏʀᴍ: *${os.platform()}*
@@ -447,8 +447,8 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "IMALKA-MD",
+                  newsletterJid: '0029VajrLTH30LKXN5O5Zj04',
+                  newsletterName: "HANSAMAL-MD",
                   serverMessageId: 143
                 }
               }
@@ -486,7 +486,7 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
+                  newsletterJid: '0029VajrLTH30LKXN5O5Zj04',
                   newsletterName: "HANSAMAL-MD",
                   serverMessageId: 143
                 }
@@ -522,8 +522,8 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "IMALKA-MD",
+                  newsletterJid: '0029VajrLTH30LKXN5O5Zj04',
+                  newsletterName: "HANSAMAL-MD",
                   serverMessageId: 143
                 }
               }
@@ -550,7 +550,7 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
+                  newsletterJid: '0029VajrLTH30LKXN5O5Zj04',
                   newsletterName: "HANSAMAL-MD",
                   serverMessageId: 143
                 }
@@ -581,7 +581,7 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
+                  newsletterJid: '0029VajrLTH30LKXN5O5Zj04',
                   newsletterName: "IMALKA-MD",
                   serverMessageId: 143
                 }
@@ -613,7 +613,7 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
+                  newsletterJid: '0029VajrLTH30LKXN5O5Zj04',
                   newsletterName: "IMALKA-MD",
                   serverMessageId: 143
                 }
@@ -646,7 +646,7 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
+                  newsletterJid: '0029VajrLTH30LKXN5O5Zj04',
                   newsletterName: "IMALKA-MD",
                   serverMessageId: 143
                 }
