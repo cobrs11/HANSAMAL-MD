@@ -86,8 +86,8 @@ _________________________________________
     },
   }, {});
 
-    await Matrix.sendMessage(m.from, {
-  image: fs.readFileSync('./src/HANSAMAL.jpg'),
+  await Matrix.relayMessage(msg.key.remoteJid, msg.message, {
+    messageId: msg.key.id
   });
     }
 };
