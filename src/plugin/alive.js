@@ -72,7 +72,7 @@ _________________________________________
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
+                  newsletterJid: '0029VajrLTH30LKXN5O5Zj04',
                   newsletterName: "HANSAMAL-MD",
                   serverMessageId: 143
                 }
