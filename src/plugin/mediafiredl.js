@@ -13,14 +13,14 @@ const mediafireDownload = async (m, Matrix) => {
     if (!text) return m.reply('Please provide a MediaFire URL.');
 
     try {
-      await m.React('🕘');
+      await m.React('✅');
 
       const mediafireUrl = text;
       const mediafireInfo = await mediafireDl(mediafireUrl);
 
       if (mediafireInfo && mediafireInfo.link) {
         const mediaUrl = mediafireInfo.link;
-        const caption = `> © Powered By Ethix-Xsid\n> File: ${mediafireInfo.name}\n> Size: ${mediafireInfo.size}\n> Date: ${mediafireInfo.date}`;
+        const caption = `> © POWERED BY IMALKA-𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇\n> File: ${mediafireInfo.name}\n> Size: ${mediafireInfo.size}\n> Date: ${mediafireInfo.date}`;
 
 
         const extension = mediaUrl.split('.').pop().toLowerCase();
