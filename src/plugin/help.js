@@ -1,95 +1,36 @@
-import moment from 'moment-timezone';
-import fs from 'fs';
-import os from 'os';
+const events = require("../lib/event");
+const { pnix, isPrivate, tiny, serif_B, clockString } = require("../lib");
+const { OWNER_NAME, BOT_NAME } = require("../config");
+const { hostname } = require("os");
+const more = String.fromCharCode(8206);
+const readMore = more.repeat(4001);
+let botStartTime = new Date();
 
-import pkg, { prepareWAMessageMedia } from '@whiskeysockets/baileys';
-const { generateWAMessageFromContent, proto } = pkg;
+pnix(
+  {
+    pattern: "menu",
+    fromMe: isPrivate,
+    type: "main",
+    desc: "Show All commands",
+  },
+  async (message, match, m) => {
+  message.client.sendMessage(message.jid, { react: { text: "📃", key: m.key } });
+    if (match) {
+      for (let i of events.commands) {
+        if (i.pattern.test(message.prefix + match))
+          message.reply(
+            `\`\`\`Command : ${message.prefix}${match.trim()}
+Description : ${i.desc}\`\`\``
+          );
+      }
+    } else {
+      let { prefix } = message;
+      let [date, time] = new Date()
+        .toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
+        .split(",");
+      let currentTime = new Date();
+      let runtime = clockString(currentTime - botStartTime);
 
-// Get total memory and free memory in bytes
-const totalMemoryBytes = os.totalmem();
-const freeMemoryBytes = os.freemem();
-
-// Define unit conversions
-const byteToKB = 1 / 1024;
-const byteToMB = byteToKB / 1024;
-const byteToGB = byteToMB / 1024;
-
-// Function to format bytes to a human-readable format
-function formatBytes(bytes) {
-  if (bytes >= Math.pow(1024, 3)) {
-    return (bytes * byteToGB).toFixed(2) + ' GB';
-  } else if (bytes >= Math.pow(1024, 2)) {
-    return (bytes * byteToMB).toFixed(2) + ' MB';
-  } else if (bytes >= 1024) {
-    return (bytes * byteToKB).toFixed(2) + ' KB';
-  } else {
-    return bytes.toFixed(2) + ' bytes';
-  }
-}
-// Bot Process Time
-const uptime = process.uptime();
-const day = Math.floor(uptime / (24 * 3600)); // Calculate days
-const hours = Math.floor((uptime % (24 * 3600)) / 3600); // Calculate hours
-const minutes = Math.floor((uptime % 3600) / 60); // Calculate minutes
-const seconds = Math.floor(uptime % 60); // Calculate seconds
-
-// Uptime
-const uptimeMessage = `*I am alive now since ${day}d ${hours}h ${minutes}m ${seconds}s*`;
-const runMessage = `*☀️ ${day} Day*\n*🕐 ${hours} Hour*\n*⏰ ${minutes} Minutes*\n*⏱️ ${seconds} Seconds*\n`;
-
-const xtime = moment.tz("Asia/Colombo").format("HH:mm:ss");
-const xdate = moment.tz("Asia/Colombo").format("DD/MM/YYYY");
-const time2 = moment().tz("Asia/Colombo").format("HH:mm:ss");
-let pushwish = "";
-
-if (time2 < "05:00:00") {
-  pushwish = `Good Morning 🌄`;
-} else if (time2 < "11:00:00") {
-  pushwish = `Good Morning 🌄`;
-} else if (time2 < "15:00:00") {
-  pushwish = `Good Afternoon 🌅`;
-} else if (time2 < "18:00:00") {
-  pushwish = `Good Evening 🌃`;
-} else if (time2 < "19:00:00") {
-  pushwish = `Good Evening 🌃`;
-} else {
-  pushwish = `Good Night 🌌`;
-}
-
-const test = async (m, Matrix) => {
-  let selectedListId;
-  const selectedButtonId = m?.message?.templateButtonReplyMessage?.selectedId;
-  const interactiveResponseMessage = m?.message?.interactiveResponseMessage;
-  if (interactiveResponseMessage) {
-    const paramsJson = interactiveResponseMessage.nativeFlowResponseMessage?.paramsJson;
-    if (paramsJson) {
-      const params = JSON.parse(paramsJson);
-      selectedListId = params.id;
-     // console.log(selectedListId);
-    }
-  }
-  const selectedId = selectedListId || selectedButtonId;
-  
-  const prefix = /^[\\/!#.]/gi.test(m.body) ? m.body.match(/^[\\/!#.]/gi)[0] : '.';
-        const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).toLowerCase() : '';
-        let ethix = {
-    public: true // or false
-};
-
-let mode = ethix.public ? 'public' : 'private';
-
-        const validCommands = ['list', 'help', 'menu'];
-
-  if (validCommands.includes(cmd)) {
-    let msg = generateWAMessageFromContent(m.from, {
-      viewOnceMessage: {
-        message: {
-          "messageContextInfo": {
-            "deviceListMetadata": {},
-            "deviceListMetadataVersion": 2
-          },
-          interactiveMessage: proto.Message.InteractiveMessage.create({
-            body: proto.Message.InteractiveMessage.Body.create({
               text: `╭─────────────━┈⊷
 │🤖 ʙᴏᴛ ɴᴀᴍᴇ: *𝙷𝙰𝙽𝚂𝙰𝙼𝙰𝙻-𝙼𝙳*
 │📍 ᴠᴇʀꜱɪᴏɴ: 3.0.1
