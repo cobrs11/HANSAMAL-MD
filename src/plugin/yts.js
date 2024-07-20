@@ -33,7 +33,7 @@ const song = async (m, Matrix) => {
     if (!text) return m.reply('Please provide a YouTube URL or search query');
 
     try {
-      await m.React("🕘");
+      await m.React("🌐");
 
       // Search YouTube for the provided query
       const searchResult = await yts(text);
@@ -89,7 +89,7 @@ const song = async (m, Matrix) => {
                 text: `*𝗛𝗔𝗡𝗦𝗔𝗠𝗔𝗟-𝞛𝘿 VIDEO DOWNLOADER*\n\n> *TITLE:* _${title}_\n> *AUTHOR:* _${author}_\n> *DURATION:* _${duration}s_\n> *VIEWS:* _${views}_\n> *URL:* _${url}_`
               }),
               footer: proto.Message.InteractiveMessage.Footer.create({
-                text: "© Powered By IMALKA-MD"
+                text: "© Powered By 🌐IMALKA-HANSAMAL"
               }),
               header: proto.Message.InteractiveMessage.Header.create({
                 ...(await prepareWAMessageMedia({ image: { url: firstVideo.thumbnail } }, { upload: Matrix.waUploadToServer })),
@@ -173,7 +173,7 @@ const song = async (m, Matrix) => {
        /*  await Matrix.sendMessage(m.from,
             {
               image: { url: thumbnailUrl },
-              caption: `> *TITLE:* ${title}\n> *AUTHOR:* ${author}\n> *DURATION:* ${duration}\n> *© POWERED BY 𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-𝞛𝘿*`,
+              caption: `> *TITLE:* ${title}\n> *AUTHOR:* ${author}\n> *DURATION:* ${duration}\n> *© POWERED BY 🌐IMALKA-HANSAMAL*`,
               contextInfo: {
                 externalAdReply: {
                   showAdAttribution: true,
@@ -217,7 +217,7 @@ const song = async (m, Matrix) => {
             {
               video: finalVideoBuffer,
               mimetype: 'video/mp4',
-              caption: `> *TITLE:* ${title}\n> *AUTHOR:* ${author}\n> *DURATION:* ${duration}\n\n> *POWERED BY IMALKA-MD*`,
+              caption: `> *TITLE:* ${title}\n> *AUTHOR:* ${author}\n> *DURATION:* ${duration}\n\n> *POWERED BY 🌐IMALKA-HANSAMAL*`,
             },
             { quoted: m }
           );
