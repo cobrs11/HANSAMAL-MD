@@ -86,10 +86,10 @@ const song = async (m, Matrix) => {
             },
             interactiveMessage: proto.Message.InteractiveMessage.create({
               body: proto.Message.InteractiveMessage.Body.create({
-                text: `> *IMALKA-MD VIDEO DOWNLOADER*\n> *TITLE:* ${videoDetails.title}\n> *AUTHOR:* ${videoDetails.author}\n> *VIEWS:* ${videoDetails.views}\n> *LIKES:* ${videoDetails.likes}\n> *UPLOAD DATE:* ${videoDetails.uploadDate}\n> *DURATION:* ${videoDetails.duration}\n`
+                text: `> *HANSAMAL-MD VIDEO DOWNLOADER*\n> *TITLE:* ${videoDetails.title}\n> *AUTHOR:* ${videoDetails.author}\n> *VIEWS:* ${videoDetails.views}\n> *LIKES:* ${videoDetails.likes}\n> *UPLOAD DATE:* ${videoDetails.uploadDate}\n> *DURATION:* ${videoDetails.duration}\n`
               }),
               footer: proto.Message.InteractiveMessage.Footer.create({
-                text: "© Powered By IMALKA-MD"
+                text: "© Powered By IMALKA-HANSAMAL"
               }),
               header: proto.Message.InteractiveMessage.Header.create({
                 ...(await prepareWAMessageMedia({ image: { url: videoInfo.thumbnail } }, { upload: Matrix.waUploadToServer })),
@@ -157,7 +157,7 @@ const song = async (m, Matrix) => {
           document: finalVideoBuffer,
           mimetype: 'video/mp4',
           fileName: `${selectedQuality.title}.mp4`,
-          caption: `*DOWNLOADED BY 𝙄𝙈𝘼𝙇𝙆𝘼-𝞛𝘿*`,
+          caption: `*DOWNLOADED BY HANSAMAL-𝞛𝘿*`,
           contextInfo: {
             externalAdReply: {
               showAdAttribution: true,
