@@ -166,7 +166,7 @@ let mode = ethix.public ? 'public' : 'private';
                       {
                         "header":"",
                         "title":"🔍sᴇᴀʀᴄʜ ᴍᴇɴᴜ",
-                        "description":"♂️ 𝐒𝚮𝚯𝐖 𝚳𝚵 𝐒𝚵𝚫𝚪𝐂𝚮 𝚳𝚵𝚴𝐔",
+                        "description":"𝐒𝚮𝚯𝐖 𝚳𝚵 𝐒𝚵𝚫𝚪𝐂𝚮 𝚳𝚵𝚴𝐔",
                         "id":"Search Menu"
                       },
                       {
@@ -191,7 +191,7 @@ let mode = ethix.public ? 'public' : 'private';
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
+                  newsletterJid: '0029VajrLTH30LKXN5O5Zj04',
                   newsletterName: "HANSAMAL-MD",
                   serverMessageId: 143
                 }
@@ -343,7 +343,7 @@ let mode = ethix.public ? 'public' : 'private';
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
+                  newsletterJid: '0029VajrLTH30LKXN5O5Zj04',
                   newsletterName: "HANSAMAL-MD",
                   serverMessageId: 143
                 }
@@ -557,8 +557,8 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
-                  newsletterName: "IMALKA-MD",
+                  newsletterJid: '0029VajrLTH30LKXN5O5Zj04',
+                  newsletterName: "HANSAMAL-MD",
                   serverMessageId: 143
                 }
               }
