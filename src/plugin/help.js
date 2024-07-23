@@ -440,7 +440,7 @@ await Matrix.sendMessage(m.from, {
 ┃✰ ${prefix}𝙸𝚗𝚏𝚘𝚋𝚘𝚝
 ╰━━━━━━━━━━━━━━━⪼`
 await Matrix.sendMessage(m.from, {
-  image: fs.readFileSync('./src/HANSAMAL.jpg'), 
+  image: fs.readFileSync('./src/MAIN.jpg'), 
   caption: str, 
   contextInfo: {
                   mentionedJid: [m.sender], 
@@ -479,7 +479,7 @@ await Matrix.sendMessage(m.from, {
 ┃✰ ${prefix}𝚊𝚞𝚝𝚘𝚜𝚟𝚒𝚎𝚠
 ╰━━━━━━━━━━━━━━━⪼`
 await Matrix.sendMessage(m.from, {
-  image: fs.readFileSync('./src/HANSAMAL.jpg'), 
+  image: fs.readFileSync('./src/OWNER.jpg'), 
   caption: str, 
   contextInfo: {
                   mentionedJid: [m.sender], 
@@ -574,7 +574,7 @@ await Matrix.sendMessage(m.from, {
 ┃✰ ${prefix}𝚃𝚝𝚜
 ╰━━━━━━━━━━━━━━━⪼`
 await Matrix.sendMessage(m.from, {
-  image: fs.readFileSync('./src/HANSAMAL.jpg'), 
+  image: fs.readFileSync('./src/TOOL.jpg'), 
   caption: str, 
   contextInfo: {
                   mentionedJid: [m.sender], 
@@ -606,7 +606,7 @@ await Matrix.sendMessage(m.from, {
 ┃✰ ${prefix}𝙶𝚎𝚖𝚒𝚗𝚒
 ╰━━━━━━━━━━━━━━━⪼`
 await Matrix.sendMessage(m.from, {
-  image: fs.readFileSync('./src/HANSAMAL.jpg'), 
+  image: fs.readFileSync('./src/AI.jpg'), 
   caption: str, 
   contextInfo: {
                   mentionedJid: [m.sender], 
@@ -639,7 +639,7 @@ await Matrix.sendMessage(m.from, {
 ╰━━━━━━━━━━━━━━━⪼
      `
      await Matrix.sendMessage(m.from, {
-  image: fs.readFileSync('./src/HANSAMAL.jpg'), 
+  image: fs.readFileSync('./src/IMALKA.jpg'), 
   caption: str, 
   contextInfo: {
                   mentionedJid: [m.sender], 
