@@ -33,7 +33,7 @@ const song = async (m, Matrix) => {
     if (!text) return m.reply('Please provide a YouTube URL or search query');
 
     try {
-      await m.React("🌐");
+      await m.React("✅");
 
       // Search YouTube for the provided query
       const searchResult = await yts(text);
@@ -106,8 +106,8 @@ const song = async (m, Matrix) => {
                       title: "🔖 SELECT A VIDEO",
                       sections: [
                         {
-                          title: "😎 Top 10 YouTube Results - Videos",
-                          highlight_label: "🤩 Top 10",
+                          title: "🔰 BEST 10 YouTube Results - Videos",
+                          highlight_label: "🔰 BEST 10",
                           rows: videoButtons
                         },
                       ]
@@ -120,7 +120,7 @@ const song = async (m, Matrix) => {
                       sections: [
                         {
                           title: "🎶 Top 10 YouTube Results - Audios",
-                          highlight_label: "🤩 Top 10",
+                          highlight_label: "🔰 BEST 10",
                           rows: audioButtons
                         },
                       ]
