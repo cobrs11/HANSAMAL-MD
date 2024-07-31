@@ -34,7 +34,7 @@ const playcommand = async (m, Matrix) => {
     }
 
     try {
-      await m.React("🕘");
+      await m.React("✅");
 
       const searchResults = await ytSearch(text);
       const videos = searchResults.videos.slice(0, 5);
@@ -276,7 +276,7 @@ const playcommand = async (m, Matrix) => {
                 externalAdReply: {
                   showAdAttribution: true,
                   title: selectedMedia.title,
-                  body: 'Ethix-MD',
+                  body: 'HANSAMAL-MD',
                   thumbnailUrl: selectedMedia.thumbnail,
                   sourceUrl: selectedMedia.url,
                   mediaType: 1,
