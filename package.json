@@ -1,13 +1,13 @@
 {
-  "name": "HANSAMAL-MD",
+  "name": "Hansamal-MD",
   "version": "10.8.1",
-  "description": "HANSAMAL-MD latest multi device whatsapp bot",
+  "description": "Hansamal-MD latest multi device whatsapp bot",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "start": "pm2 start src/index.js --deep-monitoring --attach --name HANSAMAL-MD",
-    "stop": "pm2 stop HANSAMAL-MD",
-    "restart": "pm2 restart HANSAMAL-MD"
+    "start": "pm2 start src/index.js --deep-monitoring --attach --name Hansamal-MD",
+    "stop": "pm2 stop Hansamal-MD",
+    "restart": "pm2 restart Hansamal-MD"
   },
   "keywords": ["hansamal-md", "whatsapp-bot", "whatsapp md bot"],
   "author": "IMALKA-HANSAMAL",
