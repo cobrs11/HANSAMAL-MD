@@ -13,7 +13,7 @@ const mediafireDownload = async (m, Matrix) => {
     if (!text) return m.reply('Please provide a MediaFire URL.');
 
     try {
-      await m.React('🕘');
+      await m.React('✅');
 
       const mediafireUrl = text;
       const mediafireInfo = await mediafireDl(mediafireUrl);
