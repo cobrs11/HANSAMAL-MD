@@ -5,13 +5,13 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "start": "pm2 start src/index.js --deep-monitoring --attach --name Hansamal-MD",
-    "stop": "pm2 stop Hansamal-MD",
-    "restart": "pm2 restart Hansamal-MD"
+    "start": "pm2 start src/index.js --deep-monitoring --attach --name hansamal",
+    "stop": "pm2 stop hansamal",
+    "restart": "pm2 restart hansamal"
   },
   "keywords": ["hansamal-md", "whatsapp-bot", "whatsapp md bot"],
   "author": "IMALKA-HANSAMAL",
-  "license": "ISC",
+  "license": "APACHE-2.0",
   "dependencies": {
     "@distube/ytdl-core": "^4.13.5",
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
