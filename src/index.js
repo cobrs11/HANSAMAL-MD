@@ -102,7 +102,7 @@ async function start() {
                     const msg = await store.loadMessage(key.remoteJid, key.id);
                     return msg.message || undefined;
                 }
-                return { conversation: "HANSAMAL-MD Nonstop Testing" };
+                return { conversation: "Hansamal-MD Nonstop Testing" };
             }
         });
 
