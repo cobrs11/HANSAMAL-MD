@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "start": "pm2 start src/index.js -deep-monitoring -attach -name hansamal",
+    "start": "pm2 start src/index.js --deep-monitoring --attach --name hansamal",
     "stop": "pm2 stop hansamal",
     "restart": "pm2 restart hansamal"
   },
