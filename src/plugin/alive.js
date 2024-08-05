@@ -37,7 +37,14 @@ _________________________________________
             display_text: "PING",
             id: `.ping`
           })
-        }
+        },
+    {
+                  name: "quick_reply",
+                  buttonParamsJson: JSON.stringify({
+                    display_text: "Contact Owner",
+                    id: ".owner"
+                  })
+                }
         ];
 
   const msg = generateWAMessageFromContent(m.from, {
