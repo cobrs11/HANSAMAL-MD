@@ -139,7 +139,7 @@ const song = async (m, Matrix) => {
     } catch (error) {
       console.error("Error processing your request:", error);
       m.reply('Error processing your request.');
-      await m.React("❌");
+      await m.React("⛔");
     }
   } else if (selectedId) {
     const key = parseInt(selectedId.replace('quality_', ''));
