@@ -38,13 +38,6 @@ _________________________________________
             id: `.ping`
           })
         },
-    {
-                  name: "quick_reply",
-                  buttonParamsJson: JSON.stringify({
-                    display_text: "Contact Owner",
-                    id: ".owner"
-                  })
-                }
         ];
 
   const msg = generateWAMessageFromContent(m.from, {
@@ -76,7 +69,7 @@ _________________________________________
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '',
-                  newsletterName: "HANSAMAL-MD",
+                  newsletterName: "IMALKA-MD",
                   serverMessageId: 143
                 }
               }
