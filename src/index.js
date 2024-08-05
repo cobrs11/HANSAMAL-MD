@@ -74,7 +74,7 @@ async function downloadSessionData() {
         const response = await axios.get(url);
         const data = typeof response.data === 'string' ? response.data : JSON.stringify(response.data);
         await fs.promises.writeFile(credsPath, data);
-        console.log("🥳 Session Successfully Loaded !!");
+        console.log("✅ Session Successfully Loaded !!");
     } catch (error) {
         console.error('Failed to download session data:', error);
         process.exit(1);
