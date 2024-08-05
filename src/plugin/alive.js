@@ -11,6 +11,8 @@ const alive = async (m, Matrix) => {
   const prefix = /^[\\/!#.]/gi.test(m.body) ? m.body.match(/^[\\/!#.]/gi)[0] : '/';
   const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).toLowerCase() : '';
     if (['alive', 'uptime', 'runtime'].includes(cmd)) {
+   try {
+      await m.React("🚀");
 
   const uptimeMessage = `*💞 HANSAMAL-MD Status Overview♻️*
 _________________________________________
@@ -51,7 +53,7 @@ _________________________________________
             text: uptimeMessage
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
-            text: "© Powered By 🌐IMALKA-HANSAMAL"
+            text: "© Powered By 👨‍💻IMALKA-HANSAMAL"
           }),
           header: proto.Message.InteractiveMessage.Header.create({
             title: "",
@@ -68,7 +70,7 @@ _________________________________________
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '',
-                  newsletterName: "IMALKA-MD",
+                  newsletterName: "HANSAMAL-MD",
                   serverMessageId: 143
                 }
               }
