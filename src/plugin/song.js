@@ -13,7 +13,7 @@ const song = async (m, Matrix) => {
     if (!text) return m.reply('Please provide a YT URL or search query.');
 
     try {
-      await m.React("🕘");
+      await m.React("🎶");
 
       const isUrl = ytdl.validateURL(text);
 
@@ -78,7 +78,7 @@ const song = async (m, Matrix) => {
 
         if (!firstVideo) {
           m.reply('Audio not found.');
-          await m.React("❌");
+          await m.React("⛔");
           return;
         }
 
@@ -97,7 +97,7 @@ const song = async (m, Matrix) => {
     } catch (error) {
       console.error("Error generating response:", error);
       m.reply('Error processing your request.');
-      await m.React("❌");
+      await m.React("⛔");
     }
   }
 };
