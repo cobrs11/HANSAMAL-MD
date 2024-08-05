@@ -11,8 +11,7 @@ const alive = async (m, Matrix) => {
   const prefix = /^[\\/!#.]/gi.test(m.body) ? m.body.match(/^[\\/!#.]/gi)[0] : '/';
   const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).toLowerCase() : '';
     if (['alive', 'uptime', 'runtime'].includes(cmd)) {
-   try {
-      await m.React("🚀");
+      
 
   const uptimeMessage = `*💞 HANSAMAL-MD Status Overview♻️*
 _________________________________________
