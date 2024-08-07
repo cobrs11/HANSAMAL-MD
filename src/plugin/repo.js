@@ -33,7 +33,7 @@ const handleRepoCommand = async (m, Matrix) => {
               text: "© Powered By 𝙄𝙈𝘼𝙇𝙆𝘼-𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇"
             }),
             header: proto.Message.InteractiveMessage.Header.create({
-             ...(await prepareWAMessageMedia({ image: { url: `https://telegra.ph/file/6857947f644f97b7dbbc5.jpg` } }, { upload: Matrix.waUploadToServer })),
+             ...(await prepareWAMessageMedia({ image: { url: `https://telegra.ph/file/b514abba5d1f07b055a5e.jpg` } }, { upload: Matrix.waUploadToServer })),
               title: "",
               gifPlayback: true,
               subtitle: "",
