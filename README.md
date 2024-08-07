@@ -52,7 +52,8 @@
 
 2. ## DEPLOY BY SESSION ID (WHATSAPP LOG WITH PAIR CODE)
 
-<a href='https://replit.com/@atayafuataya/HANSAMAL-MD-1' target="_blank"><img alt='Get Session ID' src='https://img.shields.io/badge/%F0%9F%9A%80%EF%B8%8F%E2%80%8D%20GET%F0%9F%93%8B%20YOUR%20WHATSAPP%20PAIR%20CODE%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB-black'/></a>
+<a href='https://replit.com/@atayafuataya/HANSAMAL-MD-1' target="_blank"><img alt='Get Session ID' src='https://img.shields.io/badge/%F0%9F%9A%80%EF%B8%8F%E2%80%8D%20GET%F0%9F%93%8B%20YOUR%20WHATSAPP%20PAIR%20CODE%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB-blue' width="400" height="50" alt="Deploy bot"/></a>
+
 <hr>
 
 <hr>
