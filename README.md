@@ -50,9 +50,9 @@
 
 <a href="https://buymeacoffee.com/imalkahansamal" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
-2. ## DEPLOY BY SESSION ID or creds.json (Qr code)
+2. ## DEPLOY BY SESSION ID (WHATSAPP LOG WITH PAIR CODE)
 
-<a href='https://replit.com/@atayafuataya/HANSAMAL-MD-1' target="_blank"><img alt='Get Session ID' src='https://img.shields.io/badge/Click here to get your session id-blue?style=for-the-badge&logo=opencv&logoColor=white'/></a>
+<a href='https://replit.com/@atayafuataya/HANSAMAL-MD-1' target="_blank"><img alt='Get Session ID' src='https://img.shields.io/badge/%F0%9F%9A%80%EF%B8%8F%E2%80%8D%20GET%F0%9F%93%8B%20YOUR%20WHATSAPP%20PAIR%20CODE%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB-black'/></a>
 <hr>
 
 <hr>
