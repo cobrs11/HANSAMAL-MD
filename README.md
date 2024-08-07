@@ -18,7 +18,9 @@
 
     
 
+![forks](https://img.shields.io/github/forks/cobrs11/HANSAMAL-MD?label=Forks&style=social)
 
+![stars](https://img.shields.io/github/stars/cobrs11/HANSAMAL-MD?style=social)
 
 
 
