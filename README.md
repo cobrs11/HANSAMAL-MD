@@ -38,6 +38,9 @@
 
 <a href='https://github.com/cobrs11/HANSAMAL-MD/fork' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/Fork This Repo-black?style=for-the-badge&logo=git&logoColor=white'/></a>
 
+
+<a href="https://buymeacoffee.com/imalkahansamal" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
 2. ## DEPLOY BY SESSION ID or creds.json (Qr code)
 
 <a href='https://replit.com/@atayafuataya/HANSAMAL-MD-1' target="_blank"><img alt='Get Session ID' src='https://img.shields.io/badge/Click here to get your session id-blue?style=for-the-badge&logo=opencv&logoColor=white'/></a>
