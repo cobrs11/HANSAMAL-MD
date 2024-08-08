@@ -14,7 +14,7 @@
 
 <p align="center">
   <a href="https://youtu.be/WcA7GZuaN0A">
-    <img alt="HANSAMAL-MD" height="300" src="https://telegra.ph/file/b514abba5d1f07b055a5e.jpg">
+    <img alt="HANSAMAL-MD" height="300" src="https://telegra.ph/file/44826e95f6e863548e408.jpg">
 
     
 
