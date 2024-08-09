@@ -5,9 +5,9 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "start": "pm2 start src/index.js --deep-monitoring --attach --name hansamal",
-    "stop": "pm2 stop hansamal",
-    "restart": "pm2 restart hansamal"
+    "start": "pm2 start src/index.js --deep-monitoring --attach --name HANSAMAL-MD",
+    "stop": "pm2 stop hansamal-md",
+    "restart": "pm2 restart hansamal-md"
   },
   "keywords": ["hansamal-md", "whatsapp-bot", "whatsapp md bot"],
   "author": "IMALKA-HANSAMAL",
