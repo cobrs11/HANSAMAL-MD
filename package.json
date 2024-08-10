@@ -1,19 +1,18 @@
 {
-  "name": "Hansamal-MD",
+  "name": "HANSAMAL-MD",
   "version": "10.8.1",
-  "description": "Hansamal-MD latest multi device whatsapp bot",
+  "description": "HANSAMAL-MD latest multi device whatsapp bot",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
     "start": "pm2 start src/index.js --deep-monitoring --attach --name HANSAMAL-MD",
-    "stop": "pm2 stop hansamal-md",
-    "restart": "pm2 restart hansamal-md"
+    "stop": "pm2 stop HANSAMAL-MD",
+    "restart": "pm2 restart HANSAMAL-MD"
   },
   "keywords": ["hansamal-md", "whatsapp-bot", "whatsapp md bot"],
-  "author": "IMALKA-HANSAMAL",
-  "license": "APACHE-2.0",
+  "author": "Hansamal",
+  "license": "ISC",
   "dependencies": {
-    "@distube/ytdl-core": "^4.13.5",
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "@google/generative-ai": "^0.9.0",
     "@hapi/boom": "^10.0.1",
@@ -50,6 +49,7 @@
     "node-os-utils": "^1.3.7",
     "node-webpmux": "^3.2.0",
     "os": "^0.1.2",
+    "pdfkit": "^0.15.0",
     "pino": "^8.20.0",
     "pm2": "^5.4.0",
     "proto": "^1.0.19",
@@ -59,7 +59,8 @@
     "tesseract.js": "^5.1.0",
     "translate-google-api": "^1.0.4",
     "uuid": "^9.0.1",
+    "wasitech": "npm:@distube/ytdl-core",
     "yt-search": "^2.11.0",
-    "ytdl-core": "^4.11.5"
+    "ytdl-core": "github:HyHamza/TalkDrove-yt-dl-core"
   }
 }
