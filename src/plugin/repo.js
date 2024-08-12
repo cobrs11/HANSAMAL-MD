@@ -10,13 +10,13 @@ const handleRepoCommand = async (m, Matrix) => {
 
     const { full_name, name, forks_count, stargazers_count, created_at, updated_at, owner } = repoData;
 
-    const messageText = `📊 Repository Information:
-    \n🔸 *Name:* HANSAMAL-MD
-    \n⭐ *Stars:* ${stargazers_count}
-    \n🍴 *Forks:* ${forks_count}
-    \n📅 *Created At:* ${new Date(created_at).toLocaleDateString()}
-    \n🛠️ *Last Updated:* ${new Date(updated_at).toLocaleDateString()}
-    \n👤 *Owner:* IMALKA-HANSAMAL`;
+    const messageText = `📊 *_Repository Information:_*
+    > 🔸 *_Name:_* HANSAMAL-MD
+    > ⭐ *_Stars:*_ ${stargazers_count}
+    > 🍴 *_Forks:_* ${forks_count}
+    > 📅 *_Created At:_* ${new Date(created_at).toLocaleDateString()}
+    > 🛠️ *_Last Updated:_* ${new Date(updated_at).toLocaleDateString()}
+    > 👤 *_Owner:_* IMALKA-HANSAMAL`;
 
     const repoMessage = generateWAMessageFromContent(m.from, {
       viewOnceMessage: {
@@ -30,10 +30,10 @@ const handleRepoCommand = async (m, Matrix) => {
               text: messageText
             }),
             footer: proto.Message.InteractiveMessage.Footer.create({
-              text: "© Powered By 𝙄𝙈𝘼𝙇𝙆𝘼-𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇"
+              text: "© ᴘᴏᴡᴇʀᴇᴅ ʙʏ HANSAMAL-MD"
             }),
-            header: proto.Message.InteractiveMessage.Header.create({
-             ...(await prepareWAMessageMedia({ image: { url: `https://telegra.ph/file/6857947f644f97b7dbbc5.jpg` } }, { upload: Matrix.waUploadToServer })),
+            header: proto.MMDessage.InteractiveMessage.Header.create({
+             ...(await prepareWAMessageMedia({ image: { url: `https://telegra.ph/file/44826e95f6e863548e408.jpg` } }, { upload: Matrix.waUploadToServer })),
               title: "",
               gifPlayback: true,
               subtitle: "",
@@ -59,7 +59,7 @@ const handleRepoCommand = async (m, Matrix) => {
                   name: "cta_url",
                   buttonParamsJson: JSON.stringify({
                     display_text: "Join Our Community",
-                    url: `https://whatsapp.com/channel/0029VajrLTH30LKXN5O5Zj04`
+                    url: `https://www.whatsapp.com/channel/0029VajrLTH30LKXN5O5Zj04`
                   })
                 }
               ],
