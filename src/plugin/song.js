@@ -1,92 +1,108 @@
-const { smd } = require("../lib");
-const { exec } = require("child_process");
-const fs = require("fs");
-async function audioEditor(_0x1ef339, _0x567a0f = "bass", _0x730356 = "") {
-  if (!_0x1ef339.quoted) {
-    return await _0x1ef339.send("*_Uhh Dear, Reply to audio!!!_*");
-  }
-  let _0x1e4c20 = _0x1ef339.quoted.mtype || _0x1ef339.mtype;
-  if (!/audio/.test(_0x1e4c20)) {
-    return await _0x1ef339.send(
-      "*_Reply to the audio you want to change with_*",
-      {},
-      "",
-      _0x730356
-    );
-  }
-  try {
-    let _0x3497f6 = "-af equalizer=f=54:width_type=o:width=2:g=20";
-    if (/bass/.test(_0x567a0f)) {
-      _0x3497f6 = "-af equalizer=f=54:width_type=o:width=2:g=20";
-    }
-    if (/blown/.test(_0x567a0f)) {
-      _0x3497f6 = "-af acrusher=.1:1:64:0:log";
-    }
-    if (/deep/.test(_0x567a0f)) {
-      _0x3497f6 = "-af atempo=4/4,asetrate=44500*2/3";
-    }
-    if (/earrape/.test(_0x567a0f)) {
-      _0x3497f6 = "-af volume=12";
-    }
-    if (/fast/.test(_0x567a0f)) {
-      _0x3497f6 = '-filter:a "atempo=1.63,asetrate=44100"';
-    }
-    if (/fat/.test(_0x567a0f)) {
-      _0x3497f6 = '-filter:a "atempo=1.6,asetrate=22100"';
-    }
-    if (/nightcore/.test(_0x567a0f)) {
-      _0x3497f6 = "-filter:a atempo=1.06,asetrate=44100*1.25";
-    }
-    if (/reverse/.test(_0x567a0f)) {
-      _0x3497f6 = '-filter_complex "areverse"';
-    }
-    if (/robot/.test(_0x567a0f)) {
-      _0x3497f6 =
-        "-filter_complex \"afftfilt=real='hypot(re,im)*sin(0)':imag='hypot(re,im)*cos(0)':win_size=512:overlap=0.75\"";
-    }
-    if (/slow/.test(_0x567a0f)) {
-      _0x3497f6 = '-filter:a "atempo=0.7,asetrate=44100"';
-    }
-    if (/smooth/.test(_0x567a0f)) {
-      _0x3497f6 =
-        "-filter:v \"minterpolate='mi_mode=mci:mc_mode=aobmc:vsbmc=1:fps=120'\"";
-    }
-    if (/tupai/.test(_0x567a0f)) {
-      _0x3497f6 = '-filter:a "atempo=0.5,asetrate=65100"';
-    }
-    let _0x25e2bd = await _0x1ef339.bot.downloadAndSaveMediaMessage(
-      _0x1ef339.quoted
-    );
-    let _0x58830b = "temp/" + (_0x1ef339.sender.slice(6) + _0x567a0f) + ".mp3";
-    exec(
-      "ffmpeg -i " + _0x25e2bd + " " + _0x3497f6 + " " + _0x58830b,
-      async (_0x43e1ec, _0x22acc9, _0x3cea68) => {
-        try {
-          fs.unlinkSync(_0x25e2bd);
-        } catch {}
-        if (_0x43e1ec) {
-          return _0x1ef339.error(_0x43e1ec);
-        } else {
-          let _0x11bfca = fs.readFileSync(_0x58830b);
-          try {
-            fs.unlinkSync(_0x58830b);
-          } catch {}
-          var _0xfba2a2 = {
-            ...(await _0x1ef339.bot.contextInfo(
-              "Hellow " + _0x1ef339.senderName + " 🤍",
-              "⇆ㅤ ||◁ㅤ❚❚ㅤ▷||ㅤ ⇆"
-            )),
-          };
-          return _0x1ef339.bot.sendMessage(
-            _0x1ef339.chat,
-            {
-              audio: _0x11bfca,
-              mimetype: "audio/mpeg",
-              ptt: /ptt|voice/.test(_0x1ef339.test || "") ? true : false,
-              contextInfo: _0xfba2a2,
+import ytdl from '@distube/ytdl-core';
+import yts from 'yt-search';
+
+const song = async (m, Matrix) => {
+  const prefixMatch = m.body.match(/^[\\/!#.]/);
+  const prefix = prefixMatch ? prefixMatch[0] : '/';
+  const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0].toLowerCase() : '';
+  const text = m.body.slice(prefix.length + cmd.length).trim();
+
+  const validCommands = ['song', 'ytmp3', 'music', 'ytmp3doc'];
+
+  if (validCommands.includes(cmd)) {
+    if (!text) return m.reply('Please provide a YT URL or search query.');
+
+    try {
+      await m.React("🕘");
+
+      const isUrl = ytdl.validateURL(text);
+
+      const sendAudioMessage = async (videoInfo, finalAudioBuffer) => {
+
+        if (cmd === 'ytmp3doc') {
+          const docMessage = {
+            document: finalAudioBuffer,
+            mimetype: 'audio/mpeg',
+            fileName: `${videoInfo.title}.mp3`,
+            contextInfo: {
+              mentionedJid: [m.sender],
+              externalAdReply: {
+                title: "↺ |◁   II   ▷|   ♡",
+                body: `Now playing: ${videoInfo.title}`,
+                thumbnailUrl: videoInfo.thumbnail,
+                sourceUrl: videoInfo.url,
+                mediaType: 1,
+                renderLargerThumbnail: false,
+              },
             },
-            {
-              quoted: _0x1ef339,
+          };
+          await Matrix.sendMessage(m.from, docMessage, { quoted: m });
+        } else {
+          const audioMessage = {
+            audio: finalAudioBuffer,
+            mimetype: 'audio/mpeg',
+            contextInfo: {
+              mentionedJid: [m.sender],
+              externalAdReply: {
+                title: "↺ |◁   II   ▷|   ♡",
+                body: `Now playing: ${videoInfo.title}`,
+                thumbnailUrl: videoInfo.thumbnail,
+                sourceUrl: videoInfo.url,
+                mediaType: 1,
+                renderLargerThumbnail: true,
+              },
+            },
+          };
+          await Matrix.sendMessage(m.from, audioMessage, { quoted: m });
+        }
+
+        await m.React("✅");
+      };
+
+      if (isUrl) {
+        const audioStream = ytdl(text, { filter: 'audioonly', quality: 'highestaudio' });
+        const audioBuffer = [];
+
+        audioStream.on('data', (chunk) => {
+          audioBuffer.push(chunk);
+        });
+
+        audioStream.on('end', async () => {
+          const finalAudioBuffer = Buffer.concat(audioBuffer);
+          const videoInfo = await yts({ videoId: ytdl.getURLVideoID(text) });
+          await sendAudioMessage(videoInfo, finalAudioBuffer);
+        });
+      } else {
+        const searchResult = await yts(text);
+        const firstVideo = searchResult.videos[0];
+
+        if (!firstVideo) {
+          m.reply('Audio not found.');
+          await m.React("❌");
+          return;
+        }
+
+        const audioStream = ytdl(firstVideo.url, { filter: 'audioonly', quality: 'highestaudio' });
+        const audioBuffer = [];
+
+        audioStream.on('data', (chunk) => {
+          audioBuffer.push(chunk);
+        });
+
+        audioStream.on('end', async () => {
+          const finalAudioBuffer = Buffer.concat(audioBuffer);
+          await sendAudioMessage(firstVideo, finalAudioBuffer);
+        });
+      }
+    } catch (error) {
+      console.error("Error generating response:", error);
+      m.reply('Error processing your request.');
+      await m.React("❌");
+    }
+  }
+};
+
+export default song;
               messageId: _0x1ef339.bot.messageId(),
             }
           );
