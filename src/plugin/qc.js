@@ -60,7 +60,7 @@ const quotedChat = async (m, gss) => {
 
       await gss.sendImageAsSticker(m.from, buffer, m, {
         packname: "",
-        author: "> Ethix-MD"
+        author: "> HANSAMAL-MD"
       });
     } catch (error) {
       console.error('Error during HTTP request:', error);
