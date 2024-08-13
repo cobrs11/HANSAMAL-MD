@@ -37,7 +37,7 @@ const handleRepoCommand = async (m, Matrix, repoUrl) => {
 *_Forks:_* ${forks_count}
 *_Created At:_* ${new Date(created_at).toLocaleDateString()}
 *_Last Updated:_* ${new Date(updated_at).toLocaleDateString()}
-*_Owner:_* ${owner.login}
+*_Owner:_* IMALKA-HANSAMAL
     `;
 
     const repoMessage = generateWAMessageFromContent(m.from, {
