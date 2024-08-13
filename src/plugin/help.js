@@ -611,7 +611,7 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
+                  newsletterJid: '',
                   newsletterName: "HANSAMAL-MD",
                   serverMessageId: 143
                 }
@@ -644,7 +644,7 @@ await Matrix.sendMessage(m.from, {
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '120363249960769123@newsletter',
+                  newsletterJid: '',
                   newsletterName: "HANSAMAL-MD",
                   serverMessageId: 143
                 }
