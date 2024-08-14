@@ -65,12 +65,17 @@
 
 4. ## Deploy to RENDER ↓
 
-<a href="https://dashboard.render.com/" target="blank"><img align="center" src="https://telegra.ph/file/c15e952f017c10e12f431.jpg" width="100" height="25" alt="Deploy bot"/></a>
+<a href="https://dashboard.render.com/" target="blank"><img align="center" src="https://telegra.ph/file/c15e952f017c10e12f431.jpg" width="100" height="20" alt="Deploy bot"/></a>
 
-## 👑 `HANSAMAL-MD BOT OWNER`👨‍💻 
+
 
    <a href="https://github.com/cobrs11/"><img src="https://telegra.ph/file/c718b67d351c1190e285b.jpg" width=80 height=80></a>   
 
 |**[`IMALKA-HANSAMAL`](https://github.com/cobrs11)**|
+
+## 👑 `HANSAMAL-MD BOT OWNER`👨‍💻 
+
+ <p align="center">+
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=EB%2BGaramond&size=30&letterSpacing=bold&duration=4000&pause=1000&color=F70000&background=FFD53A00&center=true&vCenter=true&width=435&height=100&lines=THANKS+ALL+USE+MY+BOT" alt="Typing SVG" /></a>
 
 ---
