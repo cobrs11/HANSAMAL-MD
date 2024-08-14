@@ -75,7 +75,8 @@
 
 ## 👑 `HANSAMAL-MD BOT OWNER`👨‍💻 
 
- <p align="center">+
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=EBGaramond&weight=800&size=28&letterSpacing=bold&duration=4000&pause=1000&color=F70000&background=FFD53A00&center=true&vCenter=true&repeat=false&width=435&height=100&lines=THANK+ALL+USE+MY+BOT;HANSAMAL-MD+BOT+OWNER;IMALKA-HANSAMAL" alt="Typing SVG" /></a>
-
+ <br>
+ </p>
+    <p align="center">
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=EB+Garamond&weight=800&size=28&duration=4000&pause=1000&random=false&width=435&lines=THANKS+ALL+USE+MY+BOT;HANSAMAL-MD" alt="Typing SVG" /></a>
 ---
