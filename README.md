@@ -48,7 +48,7 @@
 <a href='https://github.com/cobrs11/HANSAMAL-MD/fork' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/Fork This Repo-black?style=for-the-badge&logo=git&logoColor=white'/></a>
 
 
-<a href="https://buymeacoffee.com/imalkahansamal" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+<a href="https://cautious-halibut-pjgjrvgv5wxrhrxqw-8000.app.github.dev/" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 2. ## DEPLOY BY SESSION ID (WHATSAPP LOG WITH PAIR CODE)
 
