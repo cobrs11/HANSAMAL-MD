@@ -100,7 +100,7 @@ let mode = ethix.public ? 'public' : 'private';
 ╰─────────────━┈⊷ `
             }),
             footer: proto.Message.InteractiveMessage.Footer.create({
-              text: "© Powered By HANSAMAl-MD"
+              text: "© Powered By HANSAMAL-MD"
             }),
             header: proto.Message.InteractiveMessage.Header.create({
                 ...(await prepareWAMessageMedia({ image : fs.readFileSync('./src/HANSAMAL.jpg')}, { upload: Matrix.waUploadToServer})), 
@@ -113,70 +113,70 @@ let mode = ethix.public ? 'public' : 'private';
               buttons: [
                 {
                   "name": "single_select",
-                  "buttonParamsJson": `{"title":"𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-𝗠𝗗 𝗠𝗘𝗡𝗨",
+                  "buttonParamsJson": `{"title":"ᴛᴀᴘ ʜᴇʀᴇ",
                  "sections":
                    [{
-                    "title":" 𝙃𝘼𝙉𝙎𝘼𝙈𝘼𝙇-𝗠𝗗 𝗔𝗟𝗟 𝗠𝗘𝗡𝗨",
-                    "highlight_label":"𝙰𝙻𝙻 𝙼𝙴𝙽𝚄",
+                    "title":"ʜᴀɴꜱᴀᴍᴀʟ-ᴍᴅ ᴍᴇɴᴜ",
+                    "highlight_label":"ᴀʟʟ ᴍᴇɴᴜ",
                     "rows":[
                       {
                        "header":"",
-                       "title":"𝗔𝗟𝗟 𝗠𝗘𝗡𝗨 ",
-                       "description":"𝙷𝙰𝙽𝚂𝙰𝙼𝙰𝙻-𝙼𝙳",
+                       "title":"ᴀʟʟ ᴍᴇɴᴜ",
+                       "description":"ʜᴀɴꜱᴀᴍᴀʟ-ᴍᴅ",
                        "id":"View All Menu"
                       },
                       {
                         "header":"",
-                        "title":"𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 𝗠𝗘𝗡𝗨",
-                        "description":"𝙷𝙰𝙽𝚂𝙰𝙼𝙰𝙻-𝙼𝙳",
+                        "title":"ᴅᴏᴡɴʟᴏᴀᴅ ᴍᴇɴᴜ",
+                        "description":"ʜᴀɴꜱᴀᴍᴀʟ-ᴍᴅ",
                         "id":"Downloader Menu"
                       },
                       {
                         "header":"",
-                        "title":"𝗚𝗥𝗢𝗨𝗣 𝗠𝗘𝗡𝗨",
-                        "description":"𝙷𝙰𝙽𝚂𝙰𝙼𝙰𝙻-𝙼𝙳",
+                        "title":"ɢʀᴏᴜᴘ ᴍᴇɴᴜ",
+                        "description":"ʜᴀɴꜱᴀᴍᴀʟ-ᴍᴅ",
                         "id":"Group Menu"
                       },
                       {
                         "header":"",
-                        "title":" 𝗧𝗢𝗢𝗟 𝗠𝗘𝗡𝗨",
-                        "description":" 𝙷𝙰𝙽𝚂𝙰𝙼𝙰𝙻-𝙼𝙳",
+                        "title":"ᴛᴏᴏʟ ᴍᴇɴᴜ",
+                        "description":"ʜᴀɴꜱᴀᴍᴀʟ-ᴍᴅ",
                         "id":"Tool Menu"
                       },
                       {
                         "header":"",
-                        "title":"𝗠𝗔𝗜𝗡 𝗠𝗘𝗡𝗨",
-                        "description":" 𝙷𝙰𝙽𝚂𝙰𝙼𝙰𝙻-𝙼𝙳",
+                        "title":"ᴍᴀɪɴ ᴍᴇɴᴜ",
+                        "description":"ʜᴀɴꜱᴀᴍᴀʟ-ᴍᴅ",
                         "id":"Main Menu"
                       },
                      {
                         "header":"",
-                        "title":" 𝗢𝗪𝗡𝗘𝗥 𝗠𝗘𝗡𝗨",
-                        "description":"𝙷𝙰𝙽𝚂𝙰𝙼𝙰𝙻-𝙼𝙳",
+                        "title":"ᴏᴡɴᴇʀ ᴍᴇɴᴜ",
+                        "description":"ʜᴀɴꜱᴀᴍᴀʟ-ᴍᴅ",
                         "id":"Owner Menu"
                       },
                       {
                         "header":"",
-                        "title":"𝗔𝗜 𝗠𝗘𝗡𝗨",
-                        "description":" 𝙷𝙰𝙽𝚂𝙰𝙼𝙰𝙻-𝙼𝙳 ",
+                        "title":"ᴀɪ ᴍᴇɴᴜ",
+                        "description":"ʜᴀɴꜱᴀᴍᴀʟ-ᴍᴅ",
                         "id":"Ai Menu"
                       },
                       {
                         "header":"",
-                        "title":"𝗦𝗘𝗔𝗥𝗖𝗛 𝗠𝗘𝗡𝗨",
-                        "description":" 𝙷𝙰𝙽𝚂𝙰𝙼𝙰𝙻-𝙼𝙳",
+                        "title":"ꜱᴇᴀʀᴄʜ ᴍᴇɴᴜ",
+                        "description":"ʜᴀɴꜱᴀᴍᴀʟ-ᴍᴅ",
                         "id":"Search Menu"
                       },
                       {
                         "header":"",
-                        "title":"𝗦𝗧𝗔𝗟𝗞 𝗠𝗘𝗡𝗨",
-                        "description":" 𝙷𝙰𝙽𝚂𝙰𝙼𝙰𝙻-𝙼𝙳",
+                        "title":"ꜱᴛᴀʟᴋ ᴍᴇɴᴜ",
+                        "description":"ʜᴀɴꜱᴀᴍᴀʟ-ᴍᴅ",
                         "id":"Stalk Menu"
                       },
                       {
                         "header":"",
-                        "title":"𝗖𝗢𝗡𝗩𝗘𝗥𝗧𝗘𝗥 𝗠𝗘𝗡𝗨",
-                        "description":" 𝙷𝙰𝙽𝚂𝙰𝙼𝙰𝙻-𝙼𝙳",
+                        "title":"ᴄᴏɴᴠᴇʀᴛᴇʀ ᴍᴇɴᴜ",
+                        "description":"ʜᴀɴꜱᴀᴍᴀʟ-ᴍᴅ",
                         "id":"Converter Menu"
                       }
                     ]}
