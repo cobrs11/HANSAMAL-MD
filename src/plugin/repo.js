@@ -78,7 +78,7 @@ const handleRepoCommand = async (m, Matrix, repoUrl) => {
                   name: 'cta_url',
                   buttonParamsJson: JSON.stringify({
                     display_text: 'Click Here To Fork',
-                    url: repoUrl.replace('api.', '').replace('repos/', '/forks/'),
+                    url: 'https://github.com/cobrs11/HANSAMAL-MD/fork',
                   }),
                 },
                 {
