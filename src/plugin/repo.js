@@ -37,7 +37,7 @@ const handleRepoCommand = async (m, Matrix, repoUrl) => {
 *_Forks:_* ${forks_count}
 *_Created At:_* ${new Date(created_at).toLocaleDateString()}
 *_Last Updated:_* ${new Date(updated_at).toLocaleDateString()}
-*_Owner:_* IMALKA-HANSAMAL
+*_Owner:_* ɪᴍᴀʟᴋᴀ-ʜᴀɴꜱᴀᴍᴀʟ
     `;
 
     const repoMessage = generateWAMessageFromContent(m.from, {
@@ -52,7 +52,7 @@ const handleRepoCommand = async (m, Matrix, repoUrl) => {
               text: messageText,
             }),
             footer: proto.Message.InteractiveMessage.Footer.create({
-              text: '© ᴘᴏᴡᴇʀᴇᴅ ʙʏ HANSAMAL-MD',
+              text: '© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʜᴀɴꜱᴀᴍᴀʟ-ᴍᴅ',
             }),
             header: proto.Message.InteractiveMessage.Header.create({
               ...(await prepareWAMessageMedia({
