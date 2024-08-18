@@ -58,7 +58,7 @@ async function downloadSessionData() {
         const response = await axios.get(url);
         const data = typeof response.data === 'string' ? response.data : JSON.stringify(response.data);
         await fs.promises.writeFile(credsPath, data);
-        console.log("🔒 Session Successfully Loaded !!");
+        console.log("🔒 Session Successfully Loaded📱 !!");
         return true;
     } catch (error) {
        // console.error('Failed to download session data:', error);
@@ -70,7 +70,7 @@ async function start() {
     try {
         const { state, saveCreds } = await useMultiFileAuthState(sessionDir);
         const { version, isLatest } = await fetchLatestBaileysVersion();
-        console.log(`🤖 HANSAMAL-MD using WA v${version.join('.')}, isLatest: ${isLatest}`);
+        console.log(`👨‍💻 HANSAMAL-MD using WA v${version.join('.')}, isLatest: ${isLatest}`);
         
         const Matrix = makeWASocket({
             version,
@@ -95,8 +95,8 @@ async function start() {
                 }
             } else if (connection === 'open') {
                 if (initialConnection) {
-                    console.log(chalk.green("😃 HANSAMAL-MD CONNECTED Successful️ ✅"));
-                    Matrix.sendMessage(Matrix.user.id, { text: `😃 HANSAMAL-MD CONNECTED Successful️ ✅` });
+                    console.log(chalk.green("📍 HANSAMAL-MD CONNECTED Successful️ ✅"));
+                    Matrix.sendMessage(Matrix.user.id, { text: `📍HANSAMAL-MD CONNECTED Successful️ ✅` });
                     initialConnection = false;
                 } else {
                     console.log(chalk.blue("♻️ Connection reestablished after restart."));
@@ -143,7 +143,7 @@ async function init() {
     } else {
         const sessionDownloaded = await downloadSessionData();
         if (sessionDownloaded) {
-            console.log("🔒 Session downloaded, starting bot.");
+            console.log("📱 Session downloaded, starting bot.");
             await start();
         } else {
             console.log("No session found or downloaded, QR code will be printed for authentication.");
