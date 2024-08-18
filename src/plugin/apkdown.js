@@ -67,10 +67,10 @@ const searchAPK = async (m, Matrix) => {
             },
             interactiveMessage: proto.Message.InteractiveMessage.create({
               body: proto.Message.InteractiveMessage.Body.create({
-                text: `HANSAMAL-MD APK Downloader\n\n🔍 Search and download your favorite APKs easily.\n\n📌 Simply select an APK from the list below to get started.\n\n`
+                text: `ʜᴀɴꜱᴀᴍᴀʟ-ᴍᴅ APK Downloader\n\n🔍 Search and download your favorite APKs easily.\n\n📍 Simply select an APK from the list below to get started.\n\n`
               }),
               footer: proto.Message.InteractiveMessage.Footer.create({
-                text: "© Powered By HANSAMAL-MD"
+                text: "© Powered By ʜᴀɴꜱᴀᴍᴀʟ-ᴍᴅ"
               }),
               header: proto.Message.InteractiveMessage.Header.create({
                 ...(await prepareWAMessageMedia({ image: { url: `https://telegra.ph/file/44826e95f6e863548e408.jpg` } }, { upload: Matrix.waUploadToServer })),
@@ -87,8 +87,8 @@ const searchAPK = async (m, Matrix) => {
                       title: "🔖 Select an APK",
                       sections: [
                         {
-                          title: "BEST 10 APK Results",
-                          highlight_label: "BEST 10",
+                          title: "📱 Top 10 APK Results",
+                          highlight_label: "ʜᴀɴꜱᴀᴍᴀʟ-ᴍᴅ",
                           rows: apkButtons
                         },
                       ]
@@ -116,7 +116,7 @@ const searchAPK = async (m, Matrix) => {
     } catch (error) {
       console.error("Error processing your request:", error);
       m.reply('Error processing your request.');
-      await m.React("❌");
+      await m.React("🚫");
     }
   } else if (selectedId) { 
     const selectedAPK = apkMap.get(selectedId);
@@ -128,7 +128,7 @@ const searchAPK = async (m, Matrix) => {
         const iconUrl = apkDetails.icon;
         const size = apkDetails.size;
 
-        await Matrix.sendMessage(m.from, { image: { url: iconUrl }, caption: `You selected this APK:\n\nName: ${selectedAPK.name}\nsize: ${size}\n\n> © Powered by HANSAMAL-MD` }, { quoted: m });
+        await Matrix.sendMessage(m.from, { image: { url: iconUrl }, caption: `You selected this APK:\n\nName: ${selectedAPK.name}\nsize: ${size}\n\n> © Powered by ʜᴀɴꜱᴀᴍᴀʟ-ᴍᴅ` }, { quoted: m });
 
   
         const apkMessage = {
