@@ -1,5 +1,5 @@
-import yts from 'yt-search'
-import fg from 'api-dylux'
+import fg from 'api-dylux';
+import yts from 'yt-search';
 
 const song = async (m, Matrix) => {
 const prefixMatch = m.body.match(/^[\\/!#.]/);
