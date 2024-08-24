@@ -71,7 +71,7 @@ const handleRepoCommand = async (m, Matrix, repoUrl) => {
                   name: 'quick_reply',
                   buttonParamsJson: JSON.stringify({
                     display_text: 'Contact Owner',
-                    id: '.owner',
+                    url: 'https://wa.me/+94711262551?text=HI_HANSAMAL_BOT_OWNER',
                   }),
                 },
                 {
