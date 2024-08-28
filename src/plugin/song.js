@@ -1,161 +1,130 @@
-import pkg, { prepareWAMessageMedia } from '@whiskeysockets/baileys';
-const { generateWAMessageFromContent, proto } = pkg;
-import pkgg from 'api-dylux';
-const { audiodown } = pkgg;
+import fg from 'api-dylux'
+import yts from 'yt-search'
 
-
-const searchResultsMap = new Map();
-let searchIndex = 1;
-
-const tiktokCommand = async (m, Matrix) => {
-  let selectedListId;
-  const selectedButtonId = m?.message?.templateButtonReplyMessage?.selectedId;
-  const interactiveResponseMessage = m?.message?.interactiveResponseMessage;
-
-  if (interactiveResponseMessage) {
-    const paramsJson = interactiveResponseMessage.nativeFlowResponseMessage?.paramsJson;
-    if (paramsJson) {
-      const params = JSON.parse(paramsJson);
-      selectedListId = params.id;
-    }
-  }
-
-  const selectedId = selectedListId || selectedButtonId;
-
-  const prefixMatch = m.body.match(/^[\\/!#.]/);
+const song = async (m, Matrix) => {
+const prefixMatch = m.body.match(/^[\\/!#.]/);
   const prefix = prefixMatch ? prefixMatch[0] : '/';
   const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0].toLowerCase() : '';
   const text = m.body.slice(prefix.length + cmd.length).trim();
+  
+  const validCommands = ['song', 'ytmp3', 'music'];
 
-  const validCommands = ['song', 'mp3', 'audio'];
+   if (validCommands.includes(cmd)) {
+  
+    if (!text) return m.reply('give a YT URL or search query😍');	 
+ 
+try {
+    await m.React("🕘");
 
-  if (validCommands.includes(cmd)) {
-    if (!text) {
-      return m.reply('Please provide a song URL 😍.');
-    }
+    // Check if the input is a valid YouTube URL
+    const isUrl = improt.validateURL(text);
 
-    try {
-      await m.React("🎵");
+    if (isUrl) {
+      // If it's a URL, directly use api-dylux
+      const audioStream = fg(text, { filter: 'audioonly', quality: 'highestaudio' });
+      const audioBuffer = [];
 
+      audioStream.on('data', (chunk) => {
+        audioBuffer.push(chunk);
+      });
 
-      const audioData = await audiodown(text);
-      if (!audioData.status) {
-        await m.reply('No results found.');
+      audioStream.on('end', async () => {
+        try {
+          const finalAudioBuffer = Buffer.concat(audioBuffer);
+
+          const videoInfo = await yts({ videoId: fg.getURLVideoID(text) });
+        
+          const thumbnailMessage = {
+  image: {
+    url: videoInfo.thumbnail,
+  },
+  caption: `
+╭──═❮ *YouTube Player* ✨ ❯═─┈•
+│✑ *Title:* ${videoInfo.title}
+│✑ *duration:* ${videoInfo.timestamp}
+│✑ *Uploaded* ${videoInfo.ago}
+│✑ *Uploader:* ${videoInfo.author.name}
+╰────────────────❃ 
+`, 
+};
+          await Matrix.sendMessage(m.from, thumbnailMessage, { quoted: m });
+          await Matrix.sendMessage(m.from, { audio: finalAudioBuffer, mimetype: 'audio/mpeg' }, { quoted: m });
+          await m.React("✅");
+        } catch (err) {
+          console.error('Error sending audio:', err);
+          m.reply('Error sending audio.');
+          await m.React("❌");
+        }
+      });
+    } else {
+      // If it's a search query, use yt-search
+      const searchResult = await yts(text);
+      const firstVideo = searchResult.videos[0];
+
+      if (!firstVideo) {
+        m.reply('Audio not found.');
         await m.React("❌");
         return;
       }
 
+      const audioStream = fg(firstVideo.url, { filter: 'audioonly', quality: 'highestaudio' });
+      const audioBuffer = [];
 
-      searchResultsMap.set(searchIndex, audioData);
-
-
-      const currentResult = searchResultsMap.get(searchIndex);
-      const buttons = [
-        {
-          "name": "quick_reply",
-          "buttonParamsJson": JSON.stringify({
-            display_text: "🎦 Video",
-            id: `mediaa_video_${searchIndex}`
-          })
-        },
-        {
-          "name": "quick_reply",
-          "buttonParamsJson": JSON.stringify({
-            display_text: "🎵 Audio",
-            id: `mediaa_audio_${searchIndex}`
-          })
-        }
-      ];
-
-      const msg = generateWAMessageFromContent(m.from, {
-        viewOnceMessage: {
-          message: {
-            messageContextInfo: {
-              deviceListMetadata: {},
-              deviceListMetadataVersion: 2
-            },
-            interactiveMessage: proto.Message.InteractiveMessage.create({
-              body: proto.Message.InteractiveMessage.Body.create({
-                text: `HANSAMAL-MD Song Download\n\nTitle: ${currentResult.data.title}\nAuthor: ${currentResult.data.author.nickname}\nViews: ${currentResult.data.view}\nDuration: ${currentResult.data.duration}s\n`
-              }),
-              footer: proto.Message.InteractiveMessage.Footer.create({
-                text: "© Powered By HANSAMAL-MD"
-              }),
-              header: proto.Message.InteractiveMessage.Header.create({
-                 ...(await prepareWAMessageMedia({ image: { url: `audioinfo.thumnail` } }, { upload: Matrix.waUploadToServer })),
-                title: "",
-                gifPlayback: true,
-                subtitle: "",
-                hasMediaAttachment: false 
-              }),
-              nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
-                buttons
-              }),
-              contextInfo: {
-                mentionedJid: [m.sender],
-                forwardingScore: 9999,
-                isForwarded: true,
-              }
-            }),
-          },
-        },
-      }, {});
-
-      await Matrix.relayMessage(msg.key.remoteJid, msg.message, {
-        messageId: msg.key.id
+      audioStream.on('data', (chunk) => {
+        audioBuffer.push(chunk);
       });
-      await m.React("✅");
 
-      searchIndex += 1; 
-    } catch (error) {
-      console.error("Error processing your request:", error);
-      await m.reply('Error processing your request.');
-      await m.React("❌");
-    }
-  } else if (selectedId) { 
-    if (selectedId.startsWith('mediaa_')) {
-      const parts = selectedId.split('_');
-      const type = parts[1];
-      const key = parseInt(parts[2]);
-      const selectedMedia = searchResultsMap.get(key);
-
-      if (selectedMedia) {
+      audioStream.on('end', async () => {
         try {
-          const videoUrl = selectedMedia.data.video;
-          const audioUrl = selectedMedia.data.audio;
-          let finalMediaBuffer, mimeType, content;
+          const finalAudioBuffer = Buffer.concat(audioBuffer);
+          const thumbnailMsg = {
+  image: {
+    url: firstVideo.thumbnail,
+  },
+  caption: `
+╭──═❮ *YouTube Player* ✨ ❯═─┈•
+│✑ *Title:* ${firstVideo.title}
+│✑ *duration:* ${firstVideo.timestamp}
+│✑ *Uploaded* ${firstVideo.ago}
+│✑ *Uploader:* ${firstVideo.author.name}
+╰────────────────❃ 
+`, 
+};
+          await Matrix.sendMessage(m.from, thumbnailMsg, { quoted:mek });
+          //await Matrix.sendMessage(m.from, audio, { quoted: mek  })
+        let doc = {
+        audio: finalAudioBuffer,
+        mimetype: 'audio/mpeg',
+        ptt: true,
+        waveform:  [100, 0, 100, 0, 100, 0, 100],
+        fileName: "Matrix.mp3",
 
-          if (type === 'video') {
-            finalMediaBuffer = await getStreamBuffer(videoUrl);
-            mimeType = 'video/mp4';
-          } else if (type === 'audio') {
-            finalMediaBuffer = await getStreamBuffer(audioUrl);
-            mimeType = 'audio/mpeg';
+        contextInfo: {
+          mentionedJid: [m.sender],
+          externalAdReply: {
+            title: "↺ |◁   II   ▷|   ♡",
+            body: `Now playing: ${text}`,
+            thumbnailUrl: firstVideo.thumbnail,
+            sourceUrl: firstvideo.url,
+            mediaType: 1,
+            renderLargerThumbnail: false
           }
+        }
+    };
 
-          const fileSizeInMB = finalMediaBuffer.length / (1024 * 1024);
-
-          if (type === 'video' && fileSizeInMB <= 300) {
-            content = { video: finalMediaBuffer, mimetype: 'video/mp4', caption: '> © Powered by HANSAMAL-MD' };
-          } else if (type === 'audio' && fileSizeInMB <= 300) {
-            content = { audio: finalMediaBuffer, mimetype: 'audio/mpeg', caption: '> © Powered by HANSAMAL-MD' };
-          }
-
-          await Matrix.sendMessage(m.from, content, { quoted: m });
-        } catch (error) {
-          console.error("Error processing your request:", error);
-          await m.reply('Error processing your request.');
+    await Matrix.sendMessage(m.from, doc, { quoted: m });
+          await m.React("✅");
+        } catch (err) {
+          console.error('Error sending audio:', err);
+          m.reply('Error sending audio.');
           await m.React("❌");
         }
-      }
+      });
     }
-  }
-};
+} catch (error) {
+        console.error("Error generating response:", error);
+    }
+}
+}
 
-const getStreamBuffer = async (url) => {
-  const response = await fetch(url);
-  const buffer = await response.arrayBuffer();
-  return Buffer.from(buffer);
-};
-
-export default audioCommand;
+export default song;
