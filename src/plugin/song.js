@@ -1,130 +1,83 @@
-import fg from 'api-dylux'
-import yts from 'yt-search'
+import ytdl from 'ytdl-core';
+import yts from 'yt-search';
+import fs from 'fs';
+import { pipeline } from 'stream';
+import { promisify } from 'util';
+import os from 'os';
 
-const song = async (m, Matrix) => {
-const prefixMatch = m.body.match(/^[\\/!#.]/);
-  const prefix = prefixMatch ? prefixMatch[0] : '/';
-  const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0].toLowerCase() : '';
-  const text = m.body.slice(prefix.length + cmd.length).trim();
-  
-  const validCommands = ['song', 'ytmp3', 'music'];
+const streamPipeline = promisify(pipeline);
 
-   if (validCommands.includes(cmd)) {
-  
-    if (!text) return m.reply('give a YT URL or search query😍');	 
- 
-try {
-    await m.React("🕘");
+var handler = async (m, { conn, command, text, usedPrefix }) => {
+  if (!text) throw `Use example ${usedPrefix}${command} naruto blue bird`;
+  await m.react(rwait);
 
-    // Check if the input is a valid YouTube URL
-    const isUrl = improt.validateURL(text);
+  let search = await yts(text);
+  let vid = search.videos[Math.floor(Math.random() * search.videos.length)];
+  if (!search) throw 'Video Not Found, Try Another Title';
+  let { title, thumbnail, timestamp, views, ago, url } = vid;
+  let wm = 'Downloading audio please wait';
 
-    if (isUrl) {
-      // If it's a URL, directly use api-dylux
-      const audioStream = fg(text, { filter: 'audioonly', quality: 'highestaudio' });
-      const audioBuffer = [];
+  let captvid = `✼ ••๑⋯ ❀ Y O U T U B E ❀ ⋯⋅๑•• ✼
+  ❏ Title: ${title}
+  ❐ Duration: ${timestamp}
+  ❑ Views: ${views}
+  ❒ Upload: ${ago}
+  ❒ Link: ${url}
+⊱─━━━━HANSAMAL-MD━━━━─⊰`;
 
-      audioStream.on('data', (chunk) => {
-        audioBuffer.push(chunk);
-      });
+  conn.sendMessage(m.chat, { image: { url: thumbnail }, caption: captvid, footer: author }, { quoted: m });
 
-      audioStream.on('end', async () => {
-        try {
-          const finalAudioBuffer = Buffer.concat(audioBuffer);
 
-          const videoInfo = await yts({ videoId: fg.getURLVideoID(text) });
-        
-          const thumbnailMessage = {
-  image: {
-    url: videoInfo.thumbnail,
-  },
-  caption: `
-╭──═❮ *YouTube Player* ✨ ❯═─┈•
-│✑ *Title:* ${data.title}
-│✑ *duration:* ${data.timestamp}
-│✑ *Uploaded* ${data.ago}
-│✑ *Uploader:* ${data.author.name}
-╰────────────────❃ 
-`, 
-};
-          await Matrix.sendMessage(m.from, thumbnailMessage, { quoted: m });
-          await Matrix.sendMessage(m.from, { audio: finalAudioBuffer, mimetype: 'audio/mpeg' }, { quoted: m });
-          await m.React("✅");
-        } catch (err) {
-          console.error('Error sending audio:', err);
-          m.reply('Error sending audio.');
-          await m.React("❌");
-        }
-      });
-    } else {
-      // If it's a search query, use yt-search
-      const searchResult = await yts(text);
-      const firstVideo = searchResult.videos[0];
+  const audioStream = ytdl(url, {
+    filter: 'audioonly',
+    quality: 'highestaudio',
+  });
 
-      if (!firstVideo) {
-        m.reply('Audio not found.');
-        await m.React("❌");
-        return;
+  // Get the path to the system's temporary directory
+  const tmpDir = os.tmpdir();
+
+  // Create writable stream in the temporary directory
+  const writableStream = fs.createWriteStream(`${tmpDir}/${title}.mp3`);
+
+  // Start the download
+  await streamPipeline(audioStream, writableStream);
+
+  let doc = {
+    audio: {
+      url: `${tmpDir}/${title}.mp3`
+    },
+    mimetype: 'audio/mp4',
+    fileName: `${title}`,
+    contextInfo: {
+      externalAdReply: {
+        showAdAttribution: true,
+        mediaType: 2,
+        mediaUrl: url,
+        title: title,
+        body: wm,
+        sourceUrl: url,
+        thumbnail: await (await conn.getFile(thumbnail)).data
       }
+    }
+  };
 
-      const audioStream = fg(firstVideo.url, { filter: 'audioonly', quality: 'highestaudio' });
-      const audioBuffer = [];
+  await conn.sendMessage(m.chat, doc, { quoted: m });
 
-      audioStream.on('data', (chunk) => {
-        audioBuffer.push(chunk);
-      });
-
-      audioStream.on('end', async () => {
-        try {
-          const finalAudioBuffer = Buffer.concat(audioBuffer);
-          const thumbnailMsg = {
-  image: {
-    url: firstVideo.thumbnail,
-  },
-  caption: `
-╭──═❮ *YouTube Player* ✨ ❯═─┈•
-│✑ *Title:* ${firstVideo.title}
-│✑ *duration:* ${firstVideo.timestamp}
-│✑ *Uploaded* ${firstVideo.ago}
-│✑ *Uploader:* ${firstVideo.author.name}
-╰────────────────❃ 
-`, 
+  // Delete the audio file
+  fs.unlink(`${tmpDir}/${title}.mp3`, (err) => {
+    if (err) {
+      console.error(`Failed to delete audio file: ${err}`);
+    } else {
+      console.log(`Deleted audio file: ${tmpDir}/${title}.mp3`);
+    }
+  });
 };
-          await Matrix.sendMessage(m.from, thumbnailMsg, { quoted:mek });
-          //await Matrix.sendMessage(m.from, audio, { quoted: mek  })
-        let doc = {
-        audio: finalAudioBuffer,
-        mimetype: 'audio/mpeg',
-        ptt: true,
-        waveform:  [100, 0, 100, 0, 100, 0, 100],
-        fileName: "Matrix.mp3",
 
-        contextInfo: {
-          mentionedJid: [m.sender],
-          externalAdReply: {
-            title: "↺ |◁   II   ▷|   ♡",
-            body: `Now playing: ${text}`,
-            thumbnailUrl: firstVideo.thumbnail,
-            sourceUrl: firstvideo.url,
-            mediaType: 1,
-            renderLargerThumbnail: false
-          }
-        }
-    };
+handler.help = ['play'].map((v) => v + ' <query>');
+handler.tags = ['downloader'];
+handler.command = /^song$/i;
 
-    await Matrix.sendMessage(m.from, doc, { quoted: m });
-          await m.React("✅");
-        } catch (err) {
-          console.error('Error sending audio:', err);
-          m.reply('Error sending audio.');
-          await m.React("❌");
-        }
-      });
-    }
-} catch (error) {
-        console.error("Error generating response:", error);
-    }
-}
-}
+handler.exp = 0;
+handler.diamond = false;
 
-export default song;
+export default handler;
