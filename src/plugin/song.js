@@ -40,10 +40,10 @@ try {
   },
   caption: `
 ╭──═❮ *YouTube Player* ✨ ❯═─┈•
-│✑ *Title:* ${videoInfo.title}
-│✑ *duration:* ${videoInfo.timestamp}
-│✑ *Uploaded* ${videoInfo.ago}
-│✑ *Uploader:* ${videoInfo.author.name}
+│✑ *Title:* ${data.title}
+│✑ *duration:* ${data.timestamp}
+│✑ *Uploaded* ${data.ago}
+│✑ *Uploader:* ${data.author.name}
 ╰────────────────❃ 
 `, 
 };
