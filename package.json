@@ -59,6 +59,7 @@
     "url": "^0.11.4",
     "uuid": "^9.0.1",
     "wasitech": "npm:@distube/ytdl-core",
-    "yt-search": "^2.11.0"
+    "yt-search": "^2.11.0",
+    "ytdl-core": "^4.11.2"
   }
 }
