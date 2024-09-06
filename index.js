@@ -52,7 +52,7 @@ async function downloadSessionData() {
         console.error('Please add your session to SESSION_ID env !!');
         return false;
     }
-    const sessdata = config.SESSION_ID.split("HANSAMAL-MD=")[1];
+    const sessdata = config.SESSION_ID.split("HANSAMAL-MD=", "")[1];
     const url = `https://mega.nz/file/${sessdata}`;
     try {
         const response = await axios.get(url);
