@@ -56,10 +56,10 @@
 
 2. ## DEPLOY BY SESSION ID (WHATSAPP LOG WITH PAIR CODE)
 
-<a href='https://hansamal-official.onrender.com/' target="_blank"><img alt='Get Session ID' src='https://img.shields.io/badge/%F0%9F%9A%80%EF%B8%8F%E2%80%8D%201-OUR%F0%9F%93%8B%20%20PAIR%20CODE%20WEB%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB-yellow' width="400" height="50" alt="Deploy bot"/></a>
+<a href='https://replit.com/@atayafuataya/HANSAMAL-MD-1' target="_blank"><img alt='Get Session ID' src='https://img.shields.io/badge/%F0%9F%9A%80%EF%B8%8F%E2%80%8D%201-OUR%F0%9F%93%8B%20%20PAIR%20CODE%20WEB%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB-yellow' width="400" height="50" alt="Deploy bot"/></a>
 
 <hr>
-<a href='https://4p54v8-8000.csb.app/' target="_blank"><img alt='Session ID WEB' src='https://img.shields.io/badge/%F0%9F%9A%80%EF%B8%8F%E2%80%8D%202-OUR%F0%9F%93%8B%20%20PAIR%20CODE%20WEB%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB-RED' width="400" height="50" alt="Deploy bot"/></a>
+<a href='https://replit.com/@atayafuataya/HANSAMAL-MD-1' target="_blank"><img alt='Session ID WEB' src='https://img.shields.io/badge/%F0%9F%9A%80%EF%B8%8F%E2%80%8D%202-OUR%F0%9F%93%8B%20%20PAIR%20CODE%20WEB%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB-RED' width="400" height="50" alt="Deploy bot"/></a>
 
 <hr>
 <hr>
