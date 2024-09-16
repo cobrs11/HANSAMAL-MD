@@ -15,10 +15,7 @@ const alive = async (m, Matrix) => {
   const uptimeMessage = `*HANSAMAL-MD Status Overview*
 _________________________________________
 
-*📆 ${days} Day*
-*🕰️ ${hours} Hour*
-*⏳ ${minutes} Minute*
-*⏲️ ${seconds} Second*
+*📆 ${days} Day$ , {hours} Hour, ${minutes} Minutes , {seconds} Second*
 _________________________________________
 `;
 
@@ -30,6 +27,13 @@ _________________________________________
             id: `.menu`
           })
         },
+        {
+                  name: 'cta_url',
+                  buttonParamsJson: JSON.stringify({
+                    display_text: 'Contact Owner',
+             url:'https://wa.me/+919888280858?text=HI',
+                  }),
+                },
         {
           "name": "quick_reply",
           "buttonParamsJson": JSON.stringify({
@@ -51,7 +55,7 @@ _________________________________________
             text: uptimeMessage
           }),
           footer: proto.Message.InteractiveMessage.Footer.create({
-            text: "© Powered By HANSAMAL-MD"
+            text: "© Powered By "
           }),
           header: proto.Message.InteractiveMessage.Header.create({
             title: "",
@@ -67,8 +71,8 @@ _________________________________________
                   forwardingScore: 999,
                   isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                  newsletterJid: '94711262551',
-                  newsletterName: "HANSAMAL-MD",
+                  newsletterJid: '919888280858',
+                  newsletterName: "𝙎𝙆𝙎 𝘽𝙊𝙏☮︎",
                   serverMessageId: 143
                 }
               }
