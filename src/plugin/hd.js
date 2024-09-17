@@ -7,11 +7,11 @@ const __dirname = path.dirname(__filename);
 const reminiPath = path.resolve(__dirname, '../remini.cjs');
 const { remini } = require(reminiPath);
 
-const tourl = async (m, gss) => {
+const tohd = async (m, gss) => {
   const prefixMatch = m.body.match(/^[\\/!#.]/);
   const prefix = prefixMatch ? prefixMatch[0] : '/';
   const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0].toLowerCase() : '';
-  const validCommands = ['hdr', 'hd', 'remini', 'enhance', 'upscale'];
+  const validCommands = ['hdr2', 'hd2', 'remini2', 'enhance2', 'upscale2'];
 
   if (validCommands.includes(cmd)) {
     if (!m.quoted || m.quoted.mtype !== 'imageMessage') {
@@ -21,8 +21,8 @@ const tourl = async (m, gss) => {
     const media = await m.quoted.download();
 
     try {
-        let proses = await remini(media, "enhance"); // Call remini directly
-        gss.sendMessage(m.from, { image: proses, caption: `> *Hey ${m.pushName} Image Create By HANSAMAL-MD*` }, { quoted: m });
+        let proses = await remini(media, "enhance");
+        gss.sendMessage(m.from, { image: proses, caption: `> *Hey ${m.pushName} Here Is Your Enhanced Image*\n*POWERED BY HANSAMAL-MD*` }, { quoted: m });
       
     } catch (error) {
       console.error('Error processing media:', error);
@@ -31,4 +31,4 @@ const tourl = async (m, gss) => {
   }
 };
 
-export default tourl;
+export default tohd;
