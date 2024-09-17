@@ -2,11 +2,13 @@ import path from 'path';
 import fs from 'fs';
 import { v4 as uuidv4 } from 'uuid';
 import { removeBackgroundFromImageFile } from 'remove.bg';
+import config from '../../config.cjs';
 
 const tourl = async (m, gss) => {
-  const prefixMatch = m.body.match(/^[\\/!#.]/);
-  const prefix = prefixMatch ? prefixMatch[0] : '/';
-  const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0].toLowerCase() : '';
+  const prefix = config.PREFIX;
+const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0].toLowerCase() : '';
+const text = m.body.slice(prefix.length + cmd.length).trim();
+
   const validCommands = ['removebg', 'nobg'];
 
   if (validCommands.includes(cmd)) {
@@ -39,7 +41,7 @@ const tourl = async (m, gss) => {
       scale: '100%',
       outputFile: outputFilePath
     }).then(async () => {
-      gss.sendMessage(m.from, { image: fs.readFileSync(outputFilePath), caption: `> Hey ${m.pushName} Your picture Background Romoved Sucessfully` }, { quoted: m });
+      gss.sendMessage(m.from, { image: fs.readFileSync(outputFilePath), caption: `> Hey ${m.pushName} Your picture Background Romoved Sucessfully HANSAMAL-MD` }, { quoted: m });
       fs.unlinkSync(localFilePath);
       fs.unlinkSync(outputFilePath);
     }).catch(error => {
