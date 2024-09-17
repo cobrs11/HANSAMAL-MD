@@ -1,1 +1,194 @@
-const 0x3f38a6=_0x3be7;(function(_0x1662db,_0x32a92e){const _0x4748a=_0x3be7,_0x3e3c81=_0x1662db();while(!![]){try{const _0x401d1e=parseInt(_0x4748a(0x180))/0x1*(-parseInt(_0x4748a(0x181))/0x2)+-parseInt(_0x4748a(0x189))/0x3*(parseInt(_0x4748a(0x18c))/0x4)+parseInt(_0x4748a(0x194))/0x5+parseInt(_0x4748a(0x198))/0x6+parseInt(_0x4748a(0x18e))/0x7+parseInt(_0x4748a(0x18d))/0x8*(-parseInt(_0x4748a(0x17b))/0x9)+parseInt(_0x4748a(0x18b))/0xa;if(_0x401d1e===_0x32a92e)break;else _0x3e3c81['push'](_0x3e3c81['shift']());}catch(_0x14616c){_0x3e3c81['push'](_0x3e3c81['shift']());}}}(_0x4222,0x23042));function _0x3be7(_0x362d56,_0x5545e2){const _0x42220c=_0x4222();return _0x3be7=function(_0x3be79b,_0x2987b3){_0x3be79b=_0x3be79b-0x17a;let _0x3b867d=_0x42220c[_0x3be79b];return _0x3b867d;},_0x3be7(_0x362d56,_0x5545e2);}import{youtubedl,youtubedlv2,youtubedlv3}from'@bochilteam/scraper';import _0x2ba25c from'node-fetch';function _0x4222(){const _0x5f2808=['169264zTXiZV','1218021qSzeWf','audio','*🎵\x20Processing\x20Aᴜᴅɪᴏ\x20BY\x20⬇️\x20HANSAMAL\x20MD\x20💝..._*\x0a\x0a*💝\x20\x20command\x20.playdoc\x20ᴏ\x20.play.2\x20ᴏ\x20.ytmp4doc\x20💝','&url=','title','command','1050965Obcqts','128kbps','💝\x20HANSAMAL\x20MD\x20💝\x20SEARCH\x20YOUTUBE*','result','1004682OQSZyU','sendMessage','90HiiPir','https://api.lolhuman.xyz/api/ytaudio2?apikey=','link','sendFile','audio/mp4','15807WoUElD','34sKoAsT','*💝\x20HANSAMAL\x20MD\x20💝\x20AUDIO\x20ERROR*','error','fileSizeH','chat','reply','catch','.mp3','12471wjejxH','json','2175770nVbsMG','140xXDDgz'];_0x4222=function(){return _0x5f2808;};return _0x4222();}let handler=async(_0x7f45b1,{conn:_0x55cc88,args:_0x198b52})=>{const _0x475d38=_0x3be7;if(!_0x198b52[0x0])throw _0x475d38(0x196);await _0x7f45b1[_0x475d38(0x186)](_0x475d38(0x190));try{let _0x41a048=_0x475d38(0x195),_0x318522=_0x198b52[0x0];const _0x14afcb=await youtubedl(_0x318522)['catch'](async _0x13993b=>await youtubedlv2(_0x318522))[_0x475d38(0x187)](async _0x23e04c=>await youtubedlv3(_0x318522)),_0x161b86=await _0x14afcb[_0x475d38(0x18f)][_0x41a048]['download'](),_0x16848c=await _0x14afcb[_0x475d38(0x192)],_0x221bc6=await _0x14afcb[_0x475d38(0x18f)][_0x41a048][_0x475d38(0x184)];await _0x55cc88[_0x475d38(0x17e)](_0x7f45b1['chat'],_0x161b86,_0x16848c+'.mp3',null,_0x7f45b1,![],{'mimetype':_0x475d38(0x17f)});}catch{try{let _0x4ffe66=await _0x2ba25c(_0x475d38(0x17c)+lolkeysapi+_0x475d38(0x191)+_0x198b52[0x0]),_0x124f7e=await _0x4ffe66[_0x475d38(0x18a)](),_0x477f02=_0x124f7e[_0x475d38(0x197)][_0x475d38(0x192)]||_0x475d38(0x183);await _0x55cc88[_0x475d38(0x17a)](_0x7f45b1[_0x475d38(0x185)],{'audio':{'url':_0x124f7e[_0x475d38(0x197)][_0x475d38(0x17d)]},'fileName':_0x477f02+_0x475d38(0x188),'mimetype':_0x475d38(0x17f)},{'quoted':_0x7f45b1});}catch{await _0x55cc88[_0x475d38(0x186)](_0x7f45b1['chat'],_0x475d38(0x182),_0x7f45b1);}}};handler[_0x3f38a6(0x193)]=/^fgmp3|dlmp3|getaud|yt(a|mp3)$/i;export default handler;
+import yts from 'yt-search';
+import ytdl from 'ytdl-core';
+import pkg, { prepareWAMessageMedia } from '@whiskeysockets/baileys';
+const { generateWAMessageFromContent, proto } = pkg;
+
+// Use a global variable to store the topVideos and video index
+const videoMap = new Map();
+let videoIndex = 1; // Global index for video links
+let audioIndex = 1001; // Separate index for audio links to ensure unique IDs
+
+const song = async (m, Matrix) => {
+  let selectedListId;
+  const selectedButtonId = m?.message?.templateButtonReplyMessage?.selectedId;
+  const interactiveResponseMessage = m?.message?.interactiveResponseMessage;
+
+  if (interactiveResponseMessage) {
+    const paramsJson = interactiveResponseMessage.nativeFlowResponseMessage?.paramsJson;
+    if (paramsJson) {
+      const params = JSON.parse(paramsJson);
+      selectedListId = params.id;
+    }
+  }
+
+  const selectedId = selectedListId || selectedButtonId;
+
+  const prefixMatch = m.body.match(/^[\\/!#.]/);
+  const prefix = prefixMatch ? prefixMatch[0] : '/';
+  const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0].toLowerCase() : '';
+  const text = m.body.slice(prefix.length + cmd.length).trim();
+  
+  const validCommands = ['yts', 'ytsearch'];
+
+  if (validCommands.includes(cmd)) {
+    if (!text) return m.reply('Please provide a YouTube URL or search query');
+
+    try {
+      await m.React("📡");
+
+      // Search YouTube for the provided query
+      const searchResult = await yts(text);
+      const topVideos = searchResult.videos.slice(0, 10);
+
+      if (topVideos.length === 0) {
+        m.reply('No results found.');
+        await m.React("🙆‍♂️");
+        return;
+      }
+
+      const videoButtons = topVideos.map((video, index) => {
+        const uniqueId = videoIndex + index;
+        videoMap.set(uniqueId, { ...video, isAudio: false });
+        return {
+          "header": "",
+          "title": video.title,
+          "description": ``,
+          "id": `video_${uniqueId}` // Unique key format for video buttons
+        };
+      });
+
+      const audioButtons = topVideos.map((video, index) => {
+        const uniqueId = audioIndex + index;
+        videoMap.set(uniqueId, { ...video, isAudio: true });
+        return {
+          "header": "",
+          "title": video.title,
+          "description": ``,
+          "id": `audio_${uniqueId}` // Unique key format for audio buttons
+        };
+      });
+
+      const msg = generateWAMessageFromContent(m.from, {
+        viewOnceMessage: {
+          message: {
+            messageContextInfo: {
+              deviceListMetadata: {},
+              deviceListMetadataVersion: 2
+            },
+            interactiveMessage: proto.Message.InteractiveMessage.create({
+              body: proto.Message.InteractiveMessage.Body.create({
+                text: `HANSAMAL Video Downloader\n\n🔍 Download audio or video with a single click.\n\n`
+              }),
+              footer: proto.Message.InteractiveMessage.Footer.create({
+                text: "© Powered By HANSAMAL-MD"
+              }),
+              header: proto.Message.InteractiveMessage.Header.create({
+                ...(await prepareWAMessageMedia({ image: { url: `https://imgtr.ee/images/2024/09/14/a36fb8cf045cdde562f56c49470c037e.jpeg` } }, { upload: Matrix.waUploadToServer })),
+                title: ``,
+                gifPlayback: true,
+                subtitle: "",
+                hasMediaAttachment: false 
+              }),
+              nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
+                buttons: [
+                  {
+                    name: "single_select",
+                    buttonParamsJson: JSON.stringify({
+                      title: "🔖 Select a video",
+                      sections: [
+                        {
+                          title: "😎 Top 10 YouTube Results - Videos",
+                          highlight_label: "🤩 Top 10",
+                          rows: videoButtons
+                        },
+                      ]
+                    })
+                  },
+                  {
+                    name: "single_select",
+                    buttonParamsJson: JSON.stringify({
+                      title: "🎧 Select an audio",
+                      sections: [
+                        {
+                          title: "🎶 Top 10 YouTube Results - Audios",
+                          highlight_label: "🤩 Top 10",
+                          rows: audioButtons
+                        },
+                      ]
+                    })
+                  },
+                ],
+              }),
+              contextInfo: {
+                mentionedJid: [m.sender],
+                forwardingScore: 9999,
+                isForwarded: false,
+              }
+            }),
+          },
+        },
+      }, {});
+
+      await Matrix.relayMessage(msg.key.remoteJid, msg.message, {
+        messageId: msg.key.id
+      });
+      await m.React("🚀");
+
+      // Increment the global video and audio indices for the next set of videos
+      videoIndex += topVideos.length;
+      audioIndex += topVideos.length;
+    } catch (error) {
+      console.error("Error processing your request:", error);
+      m.reply('Error processing your request.');
+      await m.React("🙆‍♂️");
+    }
+  } else if (selectedId) { // Check if selectedId exists
+    const isAudio = selectedId.startsWith('audio_');
+    const key = parseInt(selectedId.replace(isAudio ? 'audio_' : 'video_', ''));
+    const selectedVideo = videoMap.get(key); // Find video by unique key
+
+    if (selectedVideo) {
+      try {
+        const videoInfo = await ytdl.getBasicInfo(selectedVideo.videoId);
+        const title = videoInfo.videoDetails.title;
+        const author = videoInfo.videoDetails.author.name;
+        const duration = videoInfo.videoDetails.lengthSeconds;
+        const uploadDate = videoInfo.videoDetails.uploadDate;
+        const videoUrl = `https://www.youtube.com/watch?v=${selectedVideo.videoId}`;
+        const thumbnailUrl = selectedVideo.thumbnail; // Get the thumbnail URL from search results
+
+        if (selectedVideo.isAudio) {
+          // Download audio
+          const audioStream = ytdl(videoUrl, { filter: 'audioonly', quality: 'highestaudio' });
+          const finalAudioBuffer = await streamToBuffer(audioStream);
+          
+          await Matrix.sendMessage(m.from, { image: { url: thumbnailUrl }, caption: `Title: ${title}\nAuther: ${author}\nDuration: ${duration}\n *© Powered by HANSAMAL-MD*`}, { quoted: m });
+
+          await Matrix.sendMessage(m.from, { audio: finalAudioBuffer, mimetype: 'audio/mpeg' }, { quoted: m });
+        } else {
+          // Download video
+          const videoStream = ytdl(videoUrl, { filter: 'audioandvideo', quality: 'highest' });
+          const finalVideoBuffer = await streamToBuffer(videoStream);
+
+          await Matrix.sendMessage(m.from, { video: finalVideoBuffer, mimetype: 'video/mp4', caption: `Title: ${title}\nAuther: ${author}\nDuration: ${duration}\n\n *Powered by HANSAMAL-MD*` }, { quoted: m });
+        }
+      } catch (error) {
+        console.error("Error fetching video brooh:", error);
+        
+      }
+    } else {
+      
+    }
+  }
+};
+
+const streamToBuffer = async (stream) => {
+  return new Promise((resolve, reject) => {
+    const chunks = [];
+    stream.on('data', chunk => chunks.push(chunk));
+    stream.on('end', () => resolve(Buffer.concat(chunks)));
+    stream.on('error', reject);
+  });
+};
+
+export default song;
