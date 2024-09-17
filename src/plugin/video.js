@@ -1,4 +1,4 @@
-import fg from 'api-dylux';
+import ytdl from 'ytdl-core';
 import yts from 'yt-search';
 
 const video = async (m, Matrix) => {
@@ -10,18 +10,18 @@ const video = async (m, Matrix) => {
   const validCommands = ['video', 'ytmp4', 'vid'];
 
    if (validCommands.includes(cmd)) {
-    if (!text) return m.reply('Give a YouTube URL or search query HANSAMAL-MD.');
+    if (!text) return m.reply('Give a YouTube URL or search query.');
 
     try {
-      await m.React("🕘");
+      await m.React("🎊");
 
       // Check if the input is a valid YouTube URL
-      const isUrl = fg.validateURL(text);
-      await m.React("⬇️");
+      const isUrl = ytdl.validateURL(text);
+      await m.React("👻");
       
       if (isUrl) {
         // If it's a URL, directly use ytdl-core for audio and video
-        const videoStream = fg(text, { filter: 'audioandvideo', quality: 'highest' });
+        const videoStream = ytdl(text, { filter: 'audioandvideo', quality: 'highest' });
 
         const videoBuffer = [];
 
@@ -35,27 +35,27 @@ const video = async (m, Matrix) => {
 
             const videoInfo = await yts({ videoId: ytdl.getURLVideoID(text) });
     
-            await Matrix.sendMessage(m.from, { video: finalVideoBuffer, mimetype: 'video/mp4', caption: '> © Powered by IMALKAHANSAMAL-𝞛𝘿' }, { quoted: m });
-            await m.React("✅");
+            await Matrix.sendMessage(m.from, { video: finalVideoBuffer, mimetype: 'video/mp4', caption: '© Powered by HANSAMAL-MD' }, { quoted: m });
+            await m.React("🇮🇳");
           } catch (err) {
             console.error('Error sending video:', err);
             m.reply('Error sending video.');
-            await m.React("❌");
+            await m.React("🙆‍♂️");
           }
         });
       } else {
         // If it's a search query, use yt-search for video
         const searchResult = await yts(text);
         const firstVideo = searchResult.videos[0];
-        await m.React("⬇️");
+        await m.React("🎊");
 
         if (!firstVideo) {
           m.reply('Video not found.');
-          await m.React("❌");
+          await m.React("🙆‍♂️");
           return;
         }
 
-        const videoStream = fg(firstVideo.url, { filter: 'audioandvideo', quality: 'highest' });
+        const videoStream = ytdl(firstVideo.url, { filter: 'audioandvideo', quality: 'highest' });
 
         const videoBuffer = [];
 
@@ -67,12 +67,12 @@ const video = async (m, Matrix) => {
           try {
             const finalVideoBuffer = Buffer.concat(videoBuffer);
           
-            await Matrix.sendMessage(m.from, { video: finalVideoBuffer, mimetype: 'video/mp4', caption: '> © Powered by HANSAMAL-MD' }, { quoted: mek });
-            await m.React("✅");
+            await Matrix.sendMessage(m.from, { video: finalVideoBuffer, mimetype: 'video/mp4', caption: '© Powered by HANSAMAL-MD' }, { quoted: m });
+            await m.React("🇮🇳");
           } catch (err) {
             console.error('Error sending video:', err);
             m.reply('Error sending video.');
-            await m.React("❌");
+            await m.React("🙆‍♂️");
           }
         });
       }
