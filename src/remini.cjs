@@ -1,4 +1,4 @@
-//Ethix-MD-V2
+//HANSAMAL-MD
 
 const FormData = require("form-data");
 async function remini(_0x33b965, _0x34eff3) {
