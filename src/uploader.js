@@ -2,7 +2,7 @@ import axios from 'axios';
 import FormData from 'form-data';
 import fetch from 'node-fetch';
 import fs from 'fs';
-import cheerio from 'cheerio';
+import * as cheerio from 'cheerio';
 import mime from 'mime';
 
 export const TelegraPh = async (path) => {
@@ -78,7 +78,7 @@ export const webp2mp4File = async (path) => {
       const result = 'https:' + $2('div#output > p.outfile > video > source').attr('src');
       resolve({
         status: true,
-        message: "Created By Ethix-MD",
+        message: "Created By HANSAMAL-MD",
         result: result
       });
     } catch (err) {
