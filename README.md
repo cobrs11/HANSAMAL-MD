@@ -67,7 +67,7 @@
 ## DEPLOYMENT METHODS
 3. ## Deploy to Koyeb ↓
 
-<a href="https://app.koyeb.com/services/deploy/?type=git&repository=github.com%2Fcobrs11%2FHANSAMAL-MD&branch=main&name=hansamal-md&builder=dockerfile&env%5BAUTO_BLOCK=false%5D=&env%5BSESSION_ID%5D=your%20sessionid%20here&env%5BMODE%5D=public&env=%5BAUTO_READ%5D%3Dfalse&env%5BAUTO_STATUS_SEEN%5D=true" target="blank"><img align="center" src="https://i.imgur.com/PNoLtFq.png" width="300" height="100" alt="Deploy bot"/></a>
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?name=hansamal-md&type=git&repository=cobrs11%2FHANSAMAL-MD&branch=main&builder=dockerfile&env%5BSESSION_ID%5D=your+sessionid+here&env%5BMODE%5D=public&env%5BAUTO_STATUS_SEEN%5D=true&env%5BAUTO_READ%5D=flase&env%5BAUTO_REACT%5D=flase&env%5BALWAYS_ONLINE%5D=flase&ports=8000%3Bhttp%3B%2F)
 
 4. ## Deploy to RENDER ↓
 
