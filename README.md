@@ -74,6 +74,10 @@
 
 <a href="https://dashboard.render.com/" target="blank"><img align="center" src="https://telegra.ph/file/c15e952f017c10e12f431.jpg" width="100" height="20" alt="Deploy bot"/></a>
 
+5. ## Deploy to HEROKU
+
+[![Deploy to HEROKU](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/cobrs11/HANSAMAL-MD)
+
 
 
    <a href="https://github.com/cobrs11/"><img src="https://telegra.ph/file/c718b67d351c1190e285b.jpg" width=80 height=80></a>   
