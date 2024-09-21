@@ -1,11 +1,10 @@
 {
-  "name": "whatsapp-bot (HANSAMAL-MD)",
-  "description": " Whatsapp bot.",
-  "keywords": [
-    "whatsapp bot"
-  ],
-  "repository": "https://github.com/cobrs11/HANSAMAL-MD",
-  "stack": "container",
+  "name": "HANSAMAL-MD",
+  "description": "HANSAMAL-MD JS WHATSAPP BOT 😍 ",
+  "logo": "https://telegra.ph/file/44826e95f6e863548e408.jpg",
+  "keywords": ["bot"],
+  "success_url": "/",
+
   "env": { 
       "SESSION_ID": {
       "description": "your session id",
